@@ -23,14 +23,14 @@
 		F89E692B13902DF200B24D7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F89E692D13902DF200B24D7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F89E692F13902DF200B24D7D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F89E693313902DF200B24D7D /* Pomodoro-Info.plist */ = {isa = PBXFileReference; path = "Pomodoro-Info.plist"; sourceTree = "<group>"; };
+		F89E693313902DF200B24D7D /* Pomodoro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pomodoro-Info.plist"; sourceTree = "<group>"; };
 		F89E693513902DF200B24D7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F89E693713902DF200B24D7D /* Pomodoro-Prefix.pch */ = {isa = PBXFileReference; path = "Pomodoro-Prefix.pch"; sourceTree = "<group>"; };
+		F89E693713902DF200B24D7D /* Pomodoro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pomodoro-Prefix.pch"; sourceTree = "<group>"; };
 		F89E693813902DF200B24D7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F89E693A13902DF200B24D7D /* PomodoroAppDelegate.h */ = {isa = PBXFileReference; path = PomodoroAppDelegate.h; sourceTree = "<group>"; };
+		F89E693A13902DF200B24D7D /* PomodoroAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PomodoroAppDelegate.h; sourceTree = "<group>"; };
 		F89E693B13902DF200B24D7D /* PomodoroAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PomodoroAppDelegate.m; sourceTree = "<group>"; };
 		F89E693E13902DF200B24D7D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		F89E694013902DF200B24D7D /* PomodoroViewController.h */ = {isa = PBXFileReference; path = PomodoroViewController.h; sourceTree = "<group>"; };
+		F89E694013902DF200B24D7D /* PomodoroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PomodoroViewController.h; sourceTree = "<group>"; };
 		F89E694113902DF200B24D7D /* PomodoroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PomodoroViewController.m; sourceTree = "<group>"; };
 		F89E694413902DF200B24D7D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PomodoroViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
