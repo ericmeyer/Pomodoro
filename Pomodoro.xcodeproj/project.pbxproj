@@ -28,7 +28,21 @@
 		F89E69D31390310500B24D7D /* unitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E699F13902FE100B24D7D /* unitTestMain.m */; };
 		F89E69D51390337200B24D7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E69D41390337200B24D7D /* UIKit.framework */; };
 		F89E69DA1390376C00B24D7D /* PomodoroSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69D91390376C00B24D7D /* PomodoroSpec.m */; };
+		F89E69DF13903CE100B24D7D /* Pomodoro.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69DE13903CE000B24D7D /* Pomodoro.m */; };
+		F89E69E013903CE100B24D7D /* Pomodoro.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69DE13903CE000B24D7D /* Pomodoro.m */; };
+		F89E6A0E13903E9800B24D7D /* PomodoroViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E6A0D13903E9800B24D7D /* PomodoroViewControllerSpec.m */; };
+		F89E6A0F1390425A00B24D7D /* PomodoroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E694113902DF200B24D7D /* PomodoroViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F89E69DB1390393D00B24D7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F89E691E13902DF200B24D7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F89E695F13902EDE00B24D7D;
+			remoteInfo = UnitTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F89E692713902DF200B24D7D /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +82,9 @@
 		F89E699F13902FE100B24D7D /* unitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = unitTestMain.m; path = OCDSpec/Specs/Programs/unitTestMain.m; sourceTree = SOURCE_ROOT; };
 		F89E69D41390337200B24D7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F89E69D91390376C00B24D7D /* PomodoroSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PomodoroSpec.m; path = Specs/PomodoroSpec.m; sourceTree = SOURCE_ROOT; };
+		F89E69DD13903CE000B24D7D /* Pomodoro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pomodoro.h; sourceTree = "<group>"; };
+		F89E69DE13903CE000B24D7D /* Pomodoro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pomodoro.m; sourceTree = "<group>"; };
+		F89E6A0D13903E9800B24D7D /* PomodoroViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PomodoroViewControllerSpec.m; path = Specs/PomodoroViewControllerSpec.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +151,8 @@
 				F89E694113902DF200B24D7D /* PomodoroViewController.m */,
 				F89E694313902DF200B24D7D /* PomodoroViewController.xib */,
 				F89E693213902DF200B24D7D /* Supporting Files */,
+				F89E69DD13903CE000B24D7D /* Pomodoro.h */,
+				F89E69DE13903CE000B24D7D /* Pomodoro.m */,
 			);
 			path = Pomodoro;
 			sourceTree = "<group>";
@@ -153,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				F89E69D91390376C00B24D7D /* PomodoroSpec.m */,
+				F89E6A0D13903E9800B24D7D /* PomodoroViewControllerSpec.m */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -207,6 +227,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F89E69DC1390393D00B24D7D /* PBXTargetDependency */,
 			);
 			name = Pomodoro;
 			productName = Pomodoro;
@@ -301,6 +322,7 @@
 				F89E693913902DF200B24D7D /* main.m in Sources */,
 				F89E693C13902DF200B24D7D /* PomodoroAppDelegate.m in Sources */,
 				F89E694213902DF200B24D7D /* PomodoroViewController.m in Sources */,
+				F89E69DF13903CE100B24D7D /* Pomodoro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,10 +340,21 @@
 				F89E699E13902F9B00B24D7D /* OCDSpecSharedResults.m in Sources */,
 				F89E69D31390310500B24D7D /* unitTestMain.m in Sources */,
 				F89E69DA1390376C00B24D7D /* PomodoroSpec.m in Sources */,
+				F89E69E013903CE100B24D7D /* Pomodoro.m in Sources */,
+				F89E6A0E13903E9800B24D7D /* PomodoroViewControllerSpec.m in Sources */,
+				F89E6A0F1390425A00B24D7D /* PomodoroViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F89E69DC1390393D00B24D7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F89E695F13902EDE00B24D7D /* UnitTests */;
+			targetProxy = F89E69DB1390393D00B24D7D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F89E693413902DF200B24D7D /* InfoPlist.strings */ = {
