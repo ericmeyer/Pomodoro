@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F89E692C13902DF200B24D7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E692B13902DF200B24D7D /* UIKit.framework */; };
+		F89E692E13902DF200B24D7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E692D13902DF200B24D7D /* Foundation.framework */; };
+		F89E693013902DF200B24D7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E692F13902DF200B24D7D /* CoreGraphics.framework */; };
+		F89E693613902DF200B24D7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F89E693413902DF200B24D7D /* InfoPlist.strings */; };
+		F89E693913902DF200B24D7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E693813902DF200B24D7D /* main.m */; };
+		F89E693C13902DF200B24D7D /* PomodoroAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E693B13902DF200B24D7D /* PomodoroAppDelegate.m */; };
+		F89E693F13902DF200B24D7D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89E693D13902DF200B24D7D /* MainWindow.xib */; };
+		F89E694213902DF200B24D7D /* PomodoroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E694113902DF200B24D7D /* PomodoroViewController.m */; };
+		F89E694513902DF200B24D7D /* PomodoroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89E694313902DF200B24D7D /* PomodoroViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F89E692713902DF200B24D7D /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F89E692B13902DF200B24D7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F89E692D13902DF200B24D7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F89E692F13902DF200B24D7D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F89E693313902DF200B24D7D /* Pomodoro-Info.plist */ = {isa = PBXFileReference; path = "Pomodoro-Info.plist"; sourceTree = "<group>"; };
+		F89E693513902DF200B24D7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F89E693713902DF200B24D7D /* Pomodoro-Prefix.pch */ = {isa = PBXFileReference; path = "Pomodoro-Prefix.pch"; sourceTree = "<group>"; };
+		F89E693813902DF200B24D7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F89E693A13902DF200B24D7D /* PomodoroAppDelegate.h */ = {isa = PBXFileReference; path = PomodoroAppDelegate.h; sourceTree = "<group>"; };
+		F89E693B13902DF200B24D7D /* PomodoroAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PomodoroAppDelegate.m; sourceTree = "<group>"; };
+		F89E693E13902DF200B24D7D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		F89E694013902DF200B24D7D /* PomodoroViewController.h */ = {isa = PBXFileReference; path = PomodoroViewController.h; sourceTree = "<group>"; };
+		F89E694113902DF200B24D7D /* PomodoroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PomodoroViewController.m; sourceTree = "<group>"; };
+		F89E694413902DF200B24D7D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PomodoroViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F89E692413902DF200B24D7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F89E692C13902DF200B24D7D /* UIKit.framework in Frameworks */,
+				F89E692E13902DF200B24D7D /* Foundation.framework in Frameworks */,
+				F89E693013902DF200B24D7D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F89E691C13902DF200B24D7D = {
+			isa = PBXGroup;
+			children = (
+				F89E693113902DF200B24D7D /* Pomodoro */,
+				F89E692A13902DF200B24D7D /* Frameworks */,
+				F89E692813902DF200B24D7D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F89E692813902DF200B24D7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F89E692713902DF200B24D7D /* Pomodoro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F89E692A13902DF200B24D7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F89E692B13902DF200B24D7D /* UIKit.framework */,
+				F89E692D13902DF200B24D7D /* Foundation.framework */,
+				F89E692F13902DF200B24D7D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F89E693113902DF200B24D7D /* Pomodoro */ = {
+			isa = PBXGroup;
+			children = (
+				F89E693A13902DF200B24D7D /* PomodoroAppDelegate.h */,
+				F89E693B13902DF200B24D7D /* PomodoroAppDelegate.m */,
+				F89E693D13902DF200B24D7D /* MainWindow.xib */,
+				F89E694013902DF200B24D7D /* PomodoroViewController.h */,
+				F89E694113902DF200B24D7D /* PomodoroViewController.m */,
+				F89E694313902DF200B24D7D /* PomodoroViewController.xib */,
+				F89E693213902DF200B24D7D /* Supporting Files */,
+			);
+			path = Pomodoro;
+			sourceTree = "<group>";
+		};
+		F89E693213902DF200B24D7D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F89E693313902DF200B24D7D /* Pomodoro-Info.plist */,
+				F89E693413902DF200B24D7D /* InfoPlist.strings */,
+				F89E693713902DF200B24D7D /* Pomodoro-Prefix.pch */,
+				F89E693813902DF200B24D7D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F89E692613902DF200B24D7D /* Pomodoro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F89E694813902DF200B24D7D /* Build configuration list for PBXNativeTarget "Pomodoro" */;
+			buildPhases = (
+				F89E692313902DF200B24D7D /* Sources */,
+				F89E692413902DF200B24D7D /* Frameworks */,
+				F89E692513902DF200B24D7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pomodoro;
+			productName = Pomodoro;
+			productReference = F89E692713902DF200B24D7D /* Pomodoro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F89E691E13902DF200B24D7D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "8th Light";
+			};
+			buildConfigurationList = F89E692113902DF200B24D7D /* Build configuration list for PBXProject "Pomodoro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F89E691C13902DF200B24D7D;
+			productRefGroup = F89E692813902DF200B24D7D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F89E692613902DF200B24D7D /* Pomodoro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F89E692513902DF200B24D7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F89E693613902DF200B24D7D /* InfoPlist.strings in Resources */,
+				F89E693F13902DF200B24D7D /* MainWindow.xib in Resources */,
+				F89E694513902DF200B24D7D /* PomodoroViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F89E692313902DF200B24D7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F89E693913902DF200B24D7D /* main.m in Sources */,
+				F89E693C13902DF200B24D7D /* PomodoroAppDelegate.m in Sources */,
+				F89E694213902DF200B24D7D /* PomodoroViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F89E693413902DF200B24D7D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F89E693513902DF200B24D7D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F89E693D13902DF200B24D7D /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F89E693E13902DF200B24D7D /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		F89E694313902DF200B24D7D /* PomodoroViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F89E694413902DF200B24D7D /* en */,
+			);
+			name = PomodoroViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F89E694613902DF200B24D7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F89E694713902DF200B24D7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		F89E694913902DF200B24D7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pomodoro/Pomodoro-Prefix.pch";
+				INFOPLIST_FILE = "Pomodoro/Pomodoro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F89E694A13902DF200B24D7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pomodoro/Pomodoro-Prefix.pch";
+				INFOPLIST_FILE = "Pomodoro/Pomodoro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F89E692113902DF200B24D7D /* Build configuration list for PBXProject "Pomodoro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F89E694613902DF200B24D7D /* Debug */,
+				F89E694713902DF200B24D7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F89E694813902DF200B24D7D /* Build configuration list for PBXNativeTarget "Pomodoro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F89E694913902DF200B24D7D /* Debug */,
+				F89E694A13902DF200B24D7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F89E691E13902DF200B24D7D /* Project object */;
+}
