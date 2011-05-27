@@ -16,6 +16,18 @@
 		F89E693F13902DF200B24D7D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89E693D13902DF200B24D7D /* MainWindow.xib */; };
 		F89E694213902DF200B24D7D /* PomodoroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E694113902DF200B24D7D /* PomodoroViewController.m */; };
 		F89E694513902DF200B24D7D /* PomodoroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89E694313902DF200B24D7D /* PomodoroViewController.xib */; };
+		F89E696313902EDE00B24D7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E692D13902DF200B24D7D /* Foundation.framework */; };
+		F89E699713902F9B00B24D7D /* OCDSpecDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E698513902F9B00B24D7D /* OCDSpecDescription.m */; };
+		F89E699813902F9B00B24D7D /* OCDSpecDescriptionRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E698713902F9B00B24D7D /* OCDSpecDescriptionRunner.m */; };
+		F89E699913902F9B00B24D7D /* OCDSpecExample.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E698913902F9B00B24D7D /* OCDSpecExample.m */; };
+		F89E699A13902F9B00B24D7D /* OCDSpecExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E698B13902F9B00B24D7D /* OCDSpecExpectation.m */; };
+		F89E699B13902F9B00B24D7D /* OCDSpecFail.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E698D13902F9B00B24D7D /* OCDSpecFail.m */; };
+		F89E699C13902F9B00B24D7D /* OCDSpecOutputter+RedirectOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E698F13902F9B00B24D7D /* OCDSpecOutputter+RedirectOutput.m */; };
+		F89E699D13902F9B00B24D7D /* OCDSpecOutputter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E699113902F9B00B24D7D /* OCDSpecOutputter.m */; };
+		F89E699E13902F9B00B24D7D /* OCDSpecSharedResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E699313902F9B00B24D7D /* OCDSpecSharedResults.m */; };
+		F89E69D31390310500B24D7D /* unitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E699F13902FE100B24D7D /* unitTestMain.m */; };
+		F89E69D51390337200B24D7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E69D41390337200B24D7D /* UIKit.framework */; };
+		F89E69DA1390376C00B24D7D /* PomodoroSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69D91390376C00B24D7D /* PomodoroSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +45,29 @@
 		F89E694013902DF200B24D7D /* PomodoroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PomodoroViewController.h; sourceTree = "<group>"; };
 		F89E694113902DF200B24D7D /* PomodoroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PomodoroViewController.m; sourceTree = "<group>"; };
 		F89E694413902DF200B24D7D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PomodoroViewController.xib; sourceTree = "<group>"; };
+		F89E696013902EDE00B24D7D /* UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F89E698313902F9B00B24D7D /* OCDSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDSpec.h; sourceTree = "<group>"; };
+		F89E698413902F9B00B24D7D /* OCDSpecDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDSpecDescription.h; sourceTree = "<group>"; };
+		F89E698513902F9B00B24D7D /* OCDSpecDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDSpecDescription.m; sourceTree = "<group>"; };
+		F89E698613902F9B00B24D7D /* OCDSpecDescriptionRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDSpecDescriptionRunner.h; sourceTree = "<group>"; };
+		F89E698713902F9B00B24D7D /* OCDSpecDescriptionRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDSpecDescriptionRunner.m; sourceTree = "<group>"; };
+		F89E698813902F9B00B24D7D /* OCDSpecExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDSpecExample.h; sourceTree = "<group>"; };
+		F89E698913902F9B00B24D7D /* OCDSpecExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDSpecExample.m; sourceTree = "<group>"; };
+		F89E698A13902F9B00B24D7D /* OCDSpecExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDSpecExpectation.h; sourceTree = "<group>"; };
+		F89E698B13902F9B00B24D7D /* OCDSpecExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDSpecExpectation.m; sourceTree = "<group>"; };
+		F89E698C13902F9B00B24D7D /* OCDSpecFail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDSpecFail.h; sourceTree = "<group>"; };
+		F89E698D13902F9B00B24D7D /* OCDSpecFail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDSpecFail.m; sourceTree = "<group>"; };
+		F89E698E13902F9B00B24D7D /* OCDSpecOutputter+RedirectOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCDSpecOutputter+RedirectOutput.h"; sourceTree = "<group>"; };
+		F89E698F13902F9B00B24D7D /* OCDSpecOutputter+RedirectOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCDSpecOutputter+RedirectOutput.m"; sourceTree = "<group>"; };
+		F89E699013902F9B00B24D7D /* OCDSpecOutputter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDSpecOutputter.h; sourceTree = "<group>"; };
+		F89E699113902F9B00B24D7D /* OCDSpecOutputter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDSpecOutputter.m; sourceTree = "<group>"; };
+		F89E699213902F9B00B24D7D /* OCDSpecSharedResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDSpecSharedResults.h; sourceTree = "<group>"; };
+		F89E699313902F9B00B24D7D /* OCDSpecSharedResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDSpecSharedResults.m; sourceTree = "<group>"; };
+		F89E699513902F9B00B24D7D /* DescriptionRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionRunner.h; sourceTree = "<group>"; };
+		F89E699613902F9B00B24D7D /* Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example.h; sourceTree = "<group>"; };
+		F89E699F13902FE100B24D7D /* unitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = unitTestMain.m; path = OCDSpec/Specs/Programs/unitTestMain.m; sourceTree = SOURCE_ROOT; };
+		F89E69D41390337200B24D7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F89E69D91390376C00B24D7D /* PomodoroSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PomodoroSpec.m; path = Specs/PomodoroSpec.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,13 +81,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F89E695D13902EDE00B24D7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F89E69D51390337200B24D7D /* UIKit.framework in Frameworks */,
+				F89E696313902EDE00B24D7D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		F89E691C13902DF200B24D7D = {
 			isa = PBXGroup;
 			children = (
+				F89E69D41390337200B24D7D /* UIKit.framework */,
+				F89E698213902F9B00B24D7D /* OCDSpec */,
 				F89E693113902DF200B24D7D /* Pomodoro */,
+				F89E696513902EDE00B24D7D /* UnitTests */,
 				F89E692A13902DF200B24D7D /* Frameworks */,
 				F89E692813902DF200B24D7D /* Products */,
 			);
@@ -62,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				F89E692713902DF200B24D7D /* Pomodoro.app */,
+				F89E696013902EDE00B24D7D /* UnitTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +149,50 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F89E696513902EDE00B24D7D /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				F89E69D91390376C00B24D7D /* PomodoroSpec.m */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		F89E698213902F9B00B24D7D /* OCDSpec */ = {
+			isa = PBXGroup;
+			children = (
+				F89E699F13902FE100B24D7D /* unitTestMain.m */,
+				F89E698313902F9B00B24D7D /* OCDSpec.h */,
+				F89E698413902F9B00B24D7D /* OCDSpecDescription.h */,
+				F89E698513902F9B00B24D7D /* OCDSpecDescription.m */,
+				F89E698613902F9B00B24D7D /* OCDSpecDescriptionRunner.h */,
+				F89E698713902F9B00B24D7D /* OCDSpecDescriptionRunner.m */,
+				F89E698813902F9B00B24D7D /* OCDSpecExample.h */,
+				F89E698913902F9B00B24D7D /* OCDSpecExample.m */,
+				F89E698A13902F9B00B24D7D /* OCDSpecExpectation.h */,
+				F89E698B13902F9B00B24D7D /* OCDSpecExpectation.m */,
+				F89E698C13902F9B00B24D7D /* OCDSpecFail.h */,
+				F89E698D13902F9B00B24D7D /* OCDSpecFail.m */,
+				F89E698E13902F9B00B24D7D /* OCDSpecOutputter+RedirectOutput.h */,
+				F89E698F13902F9B00B24D7D /* OCDSpecOutputter+RedirectOutput.m */,
+				F89E699013902F9B00B24D7D /* OCDSpecOutputter.h */,
+				F89E699113902F9B00B24D7D /* OCDSpecOutputter.m */,
+				F89E699213902F9B00B24D7D /* OCDSpecSharedResults.h */,
+				F89E699313902F9B00B24D7D /* OCDSpecSharedResults.m */,
+				F89E699413902F9B00B24D7D /* Protocols */,
+			);
+			name = OCDSpec;
+			path = OCDSpec/OCDSpec;
+			sourceTree = SOURCE_ROOT;
+		};
+		F89E699413902F9B00B24D7D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F89E699513902F9B00B24D7D /* DescriptionRunner.h */,
+				F89E699613902F9B00B24D7D /* Example.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,6 +211,24 @@
 			name = Pomodoro;
 			productName = Pomodoro;
 			productReference = F89E692713902DF200B24D7D /* Pomodoro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F89E695F13902EDE00B24D7D /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F89E697F13902EDE00B24D7D /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				F89E695C13902EDE00B24D7D /* Sources */,
+				F89E695D13902EDE00B24D7D /* Frameworks */,
+				F89E695E13902EDE00B24D7D /* Resources */,
+				F89E69D6139033F200B24D7D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = F89E696013902EDE00B24D7D /* UnitTests.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -142,6 +252,7 @@
 			projectRoot = "";
 			targets = (
 				F89E692613902DF200B24D7D /* Pomodoro */,
+				F89E695F13902EDE00B24D7D /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -157,7 +268,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F89E695E13902EDE00B24D7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F89E69D6139033F200B24D7D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./OCDSpec/Specs/Programs/RunIPhoneUnitTest.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F89E692313902DF200B24D7D /* Sources */ = {
@@ -167,6 +301,23 @@
 				F89E693913902DF200B24D7D /* main.m in Sources */,
 				F89E693C13902DF200B24D7D /* PomodoroAppDelegate.m in Sources */,
 				F89E694213902DF200B24D7D /* PomodoroViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F89E695C13902EDE00B24D7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F89E699713902F9B00B24D7D /* OCDSpecDescription.m in Sources */,
+				F89E699813902F9B00B24D7D /* OCDSpecDescriptionRunner.m in Sources */,
+				F89E699913902F9B00B24D7D /* OCDSpecExample.m in Sources */,
+				F89E699A13902F9B00B24D7D /* OCDSpecExpectation.m in Sources */,
+				F89E699B13902F9B00B24D7D /* OCDSpecFail.m in Sources */,
+				F89E699C13902F9B00B24D7D /* OCDSpecOutputter+RedirectOutput.m in Sources */,
+				F89E699D13902F9B00B24D7D /* OCDSpecOutputter.m in Sources */,
+				F89E699E13902F9B00B24D7D /* OCDSpecSharedResults.m in Sources */,
+				F89E69D31390310500B24D7D /* unitTestMain.m in Sources */,
+				F89E69DA1390376C00B24D7D /* PomodoroSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +411,40 @@
 			};
 			name = Release;
 		};
+		F89E698013902EDE00B24D7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/OCDSpec\"";
+				INFOPLIST_FILE = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F89E698113902EDE00B24D7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/OCDSpec\"";
+				INFOPLIST_FILE = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -277,6 +462,14 @@
 			buildConfigurations = (
 				F89E694913902DF200B24D7D /* Debug */,
 				F89E694A13902DF200B24D7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F89E697F13902EDE00B24D7D /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F89E698013902EDE00B24D7D /* Debug */,
+				F89E698113902EDE00B24D7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
