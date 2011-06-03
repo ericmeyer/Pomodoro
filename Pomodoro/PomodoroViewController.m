@@ -1,9 +1,8 @@
 #import "PomodoroViewController.h"
-#import "Pomodoro.h"
 
 @implementation PomodoroViewController
 
-@synthesize timer;
+@synthesize timerLabel, timer, pomo;
 
 -(void)dealloc {
     [super dealloc];
@@ -18,24 +17,28 @@
 #pragma mark - View lifecycle
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
--(void)viewDidLoad
-{
+-(void)viewDidLoad {
     [super viewDidLoad];
-    Pomodoro* pomo = [[Pomodoro alloc] init];
-    self.timer.text = [NSString stringWithFormat: @"%@:00", pomo.duration];
+    self.pomo = [[Pomodoro alloc] init];
 }
 
--(void)viewDidUnload
-{
+-(void)viewDidUnload {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    [self.pomo release];
 }
 
--(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(IBAction) startTimer {
+    [self.pomo startAt: [NSDate date]];
+    [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(refreshTimerLabel) userInfo: nil repeats: YES];
+    [self refreshTimerLabel];
+}
+
+-(void) refreshTimerLabel {
+    self.timerLabel.text = [NSString stringWithFormat: @"%d", [[self.pomo remainingTimeAt: [NSDate date]] intValue]];
 }
 
 @end
