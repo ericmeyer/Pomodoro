@@ -23,6 +23,10 @@
     return [NSNumber numberWithInt: ([self totalSecondsRemainingAt: givenTime] % 60)];
 }
 
+-(BOOL) isOverAt:(NSDate*) givenTime {
+    return ([self totalSecondsRemainingAt: givenTime] <= 0);
+}
+
 -(int) totalSecondsRemainingAt:(NSDate *)givenTime {
     NSTimeInterval elapsedTime = [givenTime timeIntervalSinceDate: startingTime];
     return [duration intValue] - elapsedTime;
@@ -33,4 +37,5 @@
     [startingTime release];
     [super dealloc];
 }
+
 @end

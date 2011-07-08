@@ -59,6 +59,29 @@ CONTEXT(Pomodoro)
                 [expect([pomo minutesRemainingAt: one_minute_later]) toBeEqualTo: [NSNumber numberWithInt: 24]];
                 [expect([pomo secondsRemainingAt: one_minute_later]) toBeEqualTo: [NSNumber numberWithInt: 0]];
             }),
+        it(@"is not over while time remains",
+           ^{
+               Pomodoro* pomo = [[[Pomodoro alloc] init] autorelease];
+               NSDate* now = [NSDate date];
+               [pomo startAt: now];
+               expectFalse([pomo isOverAt: now]);
+           }),
+        it(@"is over when the exact duration elaspses",
+           ^{
+               Pomodoro* pomo = [[[Pomodoro alloc] init] autorelease];
+               NSDate* now = [NSDate date];
+               NSDate* end = [NSDate dateWithTimeInterval: [pomo.duration intValue] sinceDate: now];
+               [pomo startAt: now];
+               expectTruth([pomo isOverAt: end]);
+           }),
+         it(@"is over more than the duration elapses",
+            ^{
+                Pomodoro* pomo = [[[Pomodoro alloc] init] autorelease];
+                NSDate* now = [NSDate date];
+                NSDate* end = [NSDate dateWithTimeInterval: ([pomo.duration intValue]+100) sinceDate: now];
+                [pomo startAt: now];
+                expectTruth([pomo isOverAt: end]);
+            }),
              
             nil);
 }

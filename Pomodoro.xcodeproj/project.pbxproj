@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F84D418313C7973600161BBF /* unitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F84D418113C7973100161BBF /* unitTestMain.m */; };
 		F89E692C13902DF200B24D7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E692B13902DF200B24D7D /* UIKit.framework */; };
 		F89E692E13902DF200B24D7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E692D13902DF200B24D7D /* Foundation.framework */; };
 		F89E693013902DF200B24D7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E692F13902DF200B24D7D /* CoreGraphics.framework */; };
@@ -25,7 +26,6 @@
 		F89E699C13902F9B00B24D7D /* OCDSpecOutputter+RedirectOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E698F13902F9B00B24D7D /* OCDSpecOutputter+RedirectOutput.m */; };
 		F89E699D13902F9B00B24D7D /* OCDSpecOutputter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E699113902F9B00B24D7D /* OCDSpecOutputter.m */; };
 		F89E699E13902F9B00B24D7D /* OCDSpecSharedResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E699313902F9B00B24D7D /* OCDSpecSharedResults.m */; };
-		F89E69D31390310500B24D7D /* unitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E699F13902FE100B24D7D /* unitTestMain.m */; };
 		F89E69D51390337200B24D7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E69D41390337200B24D7D /* UIKit.framework */; };
 		F89E69DA1390376C00B24D7D /* PomodoroSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69D91390376C00B24D7D /* PomodoroSpec.m */; };
 		F89E69DF13903CE100B24D7D /* Pomodoro.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69DE13903CE000B24D7D /* Pomodoro.m */; };
@@ -46,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F84D418113C7973100161BBF /* unitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = unitTestMain.m; path = Programs/unitTestMain.m; sourceTree = "<group>"; };
 		F89E692713902DF200B24D7D /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89E692B13902DF200B24D7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F89E692D13902DF200B24D7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,7 +81,6 @@
 		F89E699313902F9B00B24D7D /* OCDSpecSharedResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDSpecSharedResults.m; sourceTree = "<group>"; };
 		F89E699513902F9B00B24D7D /* DescriptionRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionRunner.h; sourceTree = "<group>"; };
 		F89E699613902F9B00B24D7D /* Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example.h; sourceTree = "<group>"; };
-		F89E699F13902FE100B24D7D /* unitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = unitTestMain.m; path = OCDSpec/Specs/Programs/unitTestMain.m; sourceTree = SOURCE_ROOT; };
 		F89E69D41390337200B24D7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F89E69D91390376C00B24D7D /* PomodoroSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PomodoroSpec.m; path = Specs/PomodoroSpec.m; sourceTree = SOURCE_ROOT; };
 		F89E69DD13903CE000B24D7D /* Pomodoro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pomodoro.h; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 		F89E698213902F9B00B24D7D /* OCDSpec */ = {
 			isa = PBXGroup;
 			children = (
-				F89E699F13902FE100B24D7D /* unitTestMain.m */,
+				F84D418113C7973100161BBF /* unitTestMain.m */,
 				F89E698313902F9B00B24D7D /* OCDSpec.h */,
 				F89E698413902F9B00B24D7D /* OCDSpecDescription.h */,
 				F89E698513902F9B00B24D7D /* OCDSpecDescription.m */,
@@ -325,7 +325,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ./OCDSpec/Specs/Programs/RunIPhoneUnitTest.sh;
+			shellScript = ./OCDSpec/OCDSpec/Programs/RunIPhoneUnitTest.sh;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -353,12 +353,12 @@
 				F89E699C13902F9B00B24D7D /* OCDSpecOutputter+RedirectOutput.m in Sources */,
 				F89E699D13902F9B00B24D7D /* OCDSpecOutputter.m in Sources */,
 				F89E699E13902F9B00B24D7D /* OCDSpecSharedResults.m in Sources */,
-				F89E69D31390310500B24D7D /* unitTestMain.m in Sources */,
 				F89E69DA1390376C00B24D7D /* PomodoroSpec.m in Sources */,
 				F89E69E013903CE100B24D7D /* Pomodoro.m in Sources */,
 				F89E6A0E13903E9800B24D7D /* PomodoroViewControllerSpec.m in Sources */,
 				F89E6A0F1390425A00B24D7D /* PomodoroViewController.m in Sources */,
 				F8C60E7613C78F73008EDC3B /* MockPomodoro.m in Sources */,
+				F84D418313C7973600161BBF /* unitTestMain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
