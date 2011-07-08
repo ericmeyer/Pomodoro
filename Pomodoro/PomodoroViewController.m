@@ -1,4 +1,5 @@
 #import "PomodoroViewController.h"
+#import "Pomodoro.h"
 
 @implementation PomodoroViewController
 
@@ -15,6 +16,7 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     self.pomo = [[Pomodoro alloc] init];
+    self.timerLabel.text =  @"25:00";
 }
 
 -(void) viewDidUnload {
@@ -33,7 +35,10 @@
 }
 
 -(void) refreshTimerLabel {
-    self.timerLabel.text = [NSString stringWithFormat: @"%d", [[self.pomo remainingTimeAt: [NSDate date]] intValue]];
+    NSDate* now = [NSDate date];
+    self.timerLabel.text = [NSString stringWithFormat: @"%d:%02d",
+                            [[self.pomo minutesRemainingAt: now] intValue],
+                            [[self.pomo secondsRemainingAt: now] intValue]];
 }
 
 @end

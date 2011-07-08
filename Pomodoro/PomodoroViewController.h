@@ -1,14 +1,14 @@
 #import <UIKit/UIKit.h>
-#import "Pomodoro.h"
+#import "PomodoroProtocol.h"
 
 @interface PomodoroViewController : UIViewController {
     UILabel* timerLabel;
     NSTimer* timer;
-    Pomodoro* pomo;
+    NSObject<PomodoroProtocol>* pomo;
 }
 @property (nonatomic, retain) IBOutlet UILabel* timerLabel;
 @property (nonatomic, retain) NSTimer* timer;
-@property (nonatomic, retain) Pomodoro* pomo;
+@property (nonatomic, retain) NSObject<PomodoroProtocol>* pomo;
 
 -(IBAction) startTimer;
 -(void) refreshTimerLabel;

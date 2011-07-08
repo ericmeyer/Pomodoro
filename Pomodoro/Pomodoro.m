@@ -15,10 +15,22 @@
     self.startingTime = givenTime;
 }
 
--(NSNumber*) remainingTimeAt:(NSDate *)givenTime {
-    NSTimeInterval elapsedTime = [givenTime timeIntervalSinceDate: startingTime];
-    double remainingTime = [duration doubleValue] - elapsedTime;
-    return [NSNumber numberWithDouble: remainingTime];
+-(NSNumber*) minutesRemainingAt:(NSDate *)givenTime {
+    return [NSNumber numberWithInt: ([self totalSecondsRemainingAt: givenTime] / 60)];
 }
 
+-(NSNumber*) secondsRemainingAt:(NSDate *)givenTime {
+    return [NSNumber numberWithInt: ([self totalSecondsRemainingAt: givenTime] % 60)];
+}
+
+-(int) totalSecondsRemainingAt:(NSDate *)givenTime {
+    NSTimeInterval elapsedTime = [givenTime timeIntervalSinceDate: startingTime];
+    return [duration intValue] - elapsedTime;
+}
+
+-(void) dealloc {
+    [duration release];
+    [startingTime release];
+    [super dealloc];
+}
 @end
