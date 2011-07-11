@@ -2,7 +2,7 @@
 
 @implementation MockPomodoro
 
-@synthesize minutesRemaining, secondsRemaining, isOver;
+@synthesize minutesRemaining, secondsRemaining, isOver, formattedTime;
 
 -(void) startAt: (NSDate*) givenTime {
     //Do nothing
@@ -14,6 +14,10 @@
 
 -(NSNumber*) secondsRemainingAt: (NSDate*) givenTime {
     return [NSNumber numberWithInt: secondsRemaining];
+}
+
+-(NSString*) stringFormatTimeLeftAt: (NSDate*) givenTime {
+    return formattedTime;
 }
 
 -(BOOL) isOverAt:(NSDate*) givenTime {

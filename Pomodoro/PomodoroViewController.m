@@ -15,8 +15,8 @@
  
 -(void) viewDidLoad {
     [super viewDidLoad];
-    self.pomo = [[Pomodoro alloc] init];
-    self.timerLabel.text =  @"25:00";
+    self.pomo = [[Pomodoro alloc] initWithDuration: 15*60];
+    self.timerLabel.text =  [pomo stringFormatTimeLeftAt: nil];
 }
 
 -(void) viewDidUnload {
@@ -36,9 +36,7 @@
 
 -(void) refreshTimerLabel {
     NSDate* now = [NSDate date];
-    self.timerLabel.text = [NSString stringWithFormat: @"%d:%02d",
-                            [[self.pomo minutesRemainingAt: now] intValue],
-                            [[self.pomo secondsRemainingAt: now] intValue]];
+    self.timerLabel.text = [pomo stringFormatTimeLeftAt: now];
 }
 
 @end

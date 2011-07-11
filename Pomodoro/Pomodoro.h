@@ -8,6 +8,7 @@
 @property (nonatomic, retain) NSNumber* duration;
 @property (nonatomic, retain) NSDate* startingTime;
 
+-(id) initWithDuration: (int) givenDuration;
 -(int) totalSecondsRemainingAt: (NSDate*) givenTime;
 
 @end

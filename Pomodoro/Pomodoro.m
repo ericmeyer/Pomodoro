@@ -4,6 +4,13 @@
 
 @synthesize duration, startingTime;
 
+-(id) initWithDuration: (int) givenDuration {
+    if ((self = [super init])) {
+        self.duration = [NSNumber numberWithInt: givenDuration];
+    }
+    return self;
+}
+
 -(id) init {
     if ((self == [super init])) {
         self.duration = [NSNumber numberWithInt: 25*60];
@@ -28,8 +35,18 @@
 }
 
 -(int) totalSecondsRemainingAt:(NSDate *)givenTime {
-    NSTimeInterval elapsedTime = [givenTime timeIntervalSinceDate: startingTime];
-    return [duration intValue] - elapsedTime;
+    if (startingTime == nil) {
+        return [duration intValue];
+    } else {
+        NSTimeInterval elapsedTime = [givenTime timeIntervalSinceDate: startingTime];
+        return [duration intValue] - elapsedTime;
+    }
+}
+
+-(NSString*) stringFormatTimeLeftAt: (NSDate*) givenTime {
+    return [NSString stringWithFormat: @"%d:%02d",
+            [[self minutesRemainingAt: givenTime] intValue],
+            [[self secondsRemainingAt: givenTime] intValue]];
 }
 
 -(void) dealloc {
