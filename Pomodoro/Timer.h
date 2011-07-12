@@ -1,14 +1,23 @@
 #import <Foundation/Foundation.h>
-#import "TimerProtocol.h"
+#import "RemainingTimeProtocol.h"
+#import "TimerDelegate.h"
 
-@interface Timer : NSObject<TimerProtocol> {
-    NSNumber* duration;
-    NSDate* startingTime;
+@interface Timer : NSObject {
+    NSObject<RemainingTimeProtocol>* remainingTime;
+    NSObject<TimerDelegate>* target;
+    SEL selector;
+    int lastRemainingTime;
+    
+    NSTimer* countdown;
 }
-@property (nonatomic, retain) NSNumber* duration;
-@property (nonatomic, retain) NSDate* startingTime;
+@property (nonatomic, retain) NSObject<RemainingTimeProtocol>* remainingTime;
+@property (nonatomic, retain) NSObject<TimerDelegate>* target;
+@property (nonatomic) SEL selector;
+@property (nonatomic) int lastRemainingTime;
+@property (nonatomic, retain) NSTimer* countdown;
+@property (readonly) NSNumber* duration;
 
--(id) initWithDuration: (int) givenDuration;
--(int) totalSecondsRemainingAt: (NSDate*) givenTime;
++(id) startWithDuration: (int) duration target: (NSObject<TimerDelegate>*) target selector: (SEL) selector;
+-(void) checkRemainingTime;
 
 @end

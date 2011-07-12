@@ -1,16 +1,22 @@
 #import <UIKit/UIKit.h>
-#import "TimerProtocol.h"
+#import "TimerDelegate.h"
+#import "Timer.h"
 
-@interface PomodoroViewController : UIViewController {
+#define POMODORO_DURATION 5
+#define SNOOZE_DURATION 3
+#define BREAK_DURATION 123
+
+@interface PomodoroViewController : UIViewController<TimerDelegate> {
     UILabel* timerLabel;
-    NSTimer* timer;
-    NSObject<TimerProtocol>* pomo;
+    Timer* timer;
 }
 @property (nonatomic, retain) IBOutlet UILabel* timerLabel;
-@property (nonatomic, retain) NSTimer* timer;
-@property (nonatomic, retain) NSObject<TimerProtocol>* pomo;
+@property (nonatomic, retain) Timer* timer;
 
--(IBAction) startTimer;
--(void) refreshTimerLabel;
+-(IBAction) startPomodoro;
+-(void) startSnooze;
+-(void) startBreak;
+
+-(void) breakEnded;
 
 @end

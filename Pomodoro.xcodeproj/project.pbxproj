@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8405ADD13CDD43B003B14BD /* MockTimerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8405ADC13CDD43B003B14BD /* MockTimerDelegate.m */; };
 		F84D418313C7973600161BBF /* unitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F84D418113C7973100161BBF /* unitTestMain.m */; };
+		F88530E013CC85BD0026B42B /* TimerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530DF13CC85BD0026B42B /* TimerSpec.m */; };
+		F88530E313CC86630026B42B /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530E213CC86630026B42B /* Timer.m */; };
+		F88530E613CC89E30026B42B /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530E213CC86630026B42B /* Timer.m */; };
 		F89E692C13902DF200B24D7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E692B13902DF200B24D7D /* UIKit.framework */; };
 		F89E692E13902DF200B24D7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E692D13902DF200B24D7D /* Foundation.framework */; };
 		F89E693013902DF200B24D7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E692F13902DF200B24D7D /* CoreGraphics.framework */; };
@@ -27,16 +31,16 @@
 		F89E699D13902F9B00B24D7D /* OCDSpecOutputter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E699113902F9B00B24D7D /* OCDSpecOutputter.m */; };
 		F89E699E13902F9B00B24D7D /* OCDSpecSharedResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E699313902F9B00B24D7D /* OCDSpecSharedResults.m */; };
 		F89E69D51390337200B24D7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E69D41390337200B24D7D /* UIKit.framework */; };
-		F89E69DA1390376C00B24D7D /* TimerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69D91390376C00B24D7D /* TimerSpec.m */; };
-		F89E69DF13903CE100B24D7D /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69DE13903CE000B24D7D /* Timer.m */; };
-		F89E69E013903CE100B24D7D /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69DE13903CE000B24D7D /* Timer.m */; };
+		F89E69DA1390376C00B24D7D /* RemainingTimeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69D91390376C00B24D7D /* RemainingTimeSpec.m */; };
+		F89E69DF13903CE100B24D7D /* RemainingTime.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69DE13903CE000B24D7D /* RemainingTime.m */; };
+		F89E69E013903CE100B24D7D /* RemainingTime.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69DE13903CE000B24D7D /* RemainingTime.m */; };
 		F89E6A0E13903E9800B24D7D /* PomodoroViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E6A0D13903E9800B24D7D /* PomodoroViewControllerSpec.m */; };
 		F89E6A0F1390425A00B24D7D /* PomodoroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E694113902DF200B24D7D /* PomodoroViewController.m */; };
-		F8C60E7613C78F73008EDC3B /* MockPomodoro.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C60E7513C78F73008EDC3B /* MockPomodoro.m */; };
+		F8C60E7613C78F73008EDC3B /* MockRemainingTime.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C60E7513C78F73008EDC3B /* MockRemainingTime.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F89E69DB1390393D00B24D7D /* PBXContainerItemProxy */ = {
+		F82B2C5D13CE604300D61FCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F89E691E13902DF200B24D7D /* Project object */;
 			proxyType = 1;
@@ -46,7 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F8405ADB13CDD43B003B14BD /* MockTimerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockTimerDelegate.h; sourceTree = SOURCE_ROOT; };
+		F8405ADC13CDD43B003B14BD /* MockTimerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockTimerDelegate.m; sourceTree = SOURCE_ROOT; };
+		F8405ADF13CDD45F003B14BD /* TimerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerDelegate.h; sourceTree = "<group>"; };
 		F84D418113C7973100161BBF /* unitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = unitTestMain.m; path = Programs/unitTestMain.m; sourceTree = "<group>"; };
+		F88530DF13CC85BD0026B42B /* TimerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerSpec.m; path = Specs/TimerSpec.m; sourceTree = SOURCE_ROOT; };
+		F88530E113CC86630026B42B /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		F88530E213CC86630026B42B /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
 		F89E692713902DF200B24D7D /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89E692B13902DF200B24D7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F89E692D13902DF200B24D7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,13 +92,13 @@
 		F89E699513902F9B00B24D7D /* DescriptionRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionRunner.h; sourceTree = "<group>"; };
 		F89E699613902F9B00B24D7D /* Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example.h; sourceTree = "<group>"; };
 		F89E69D41390337200B24D7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F89E69D91390376C00B24D7D /* TimerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerSpec.m; path = Specs/TimerSpec.m; sourceTree = SOURCE_ROOT; };
-		F89E69DD13903CE000B24D7D /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Timer.h; sourceTree = "<group>"; };
-		F89E69DE13903CE000B24D7D /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
+		F89E69D91390376C00B24D7D /* RemainingTimeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RemainingTimeSpec.m; path = Specs/RemainingTimeSpec.m; sourceTree = SOURCE_ROOT; };
+		F89E69DD13903CE000B24D7D /* RemainingTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemainingTime.h; sourceTree = "<group>"; };
+		F89E69DE13903CE000B24D7D /* RemainingTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemainingTime.m; sourceTree = "<group>"; };
 		F89E6A0D13903E9800B24D7D /* PomodoroViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PomodoroViewControllerSpec.m; path = Specs/PomodoroViewControllerSpec.m; sourceTree = SOURCE_ROOT; };
-		F8C60E7313C78EB6008EDC3B /* TimerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerProtocol.h; sourceTree = "<group>"; };
-		F8C60E7413C78F73008EDC3B /* MockPomodoro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockPomodoro.h; sourceTree = SOURCE_ROOT; };
-		F8C60E7513C78F73008EDC3B /* MockPomodoro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockPomodoro.m; sourceTree = SOURCE_ROOT; };
+		F8C60E7313C78EB6008EDC3B /* RemainingTimeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemainingTimeProtocol.h; sourceTree = "<group>"; };
+		F8C60E7413C78F73008EDC3B /* MockRemainingTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockRemainingTime.h; sourceTree = SOURCE_ROOT; };
+		F8C60E7513C78F73008EDC3B /* MockRemainingTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockRemainingTime.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,9 +165,12 @@
 				F89E694113902DF200B24D7D /* PomodoroViewController.m */,
 				F89E694313902DF200B24D7D /* PomodoroViewController.xib */,
 				F89E693213902DF200B24D7D /* Supporting Files */,
-				F89E69DD13903CE000B24D7D /* Timer.h */,
-				F89E69DE13903CE000B24D7D /* Timer.m */,
-				F8C60E7313C78EB6008EDC3B /* TimerProtocol.h */,
+				F89E69DD13903CE000B24D7D /* RemainingTime.h */,
+				F89E69DE13903CE000B24D7D /* RemainingTime.m */,
+				F8C60E7313C78EB6008EDC3B /* RemainingTimeProtocol.h */,
+				F88530E113CC86630026B42B /* Timer.h */,
+				F88530E213CC86630026B42B /* Timer.m */,
+				F8405ADF13CDD45F003B14BD /* TimerDelegate.h */,
 			);
 			path = Pomodoro;
 			sourceTree = "<group>";
@@ -177,8 +190,9 @@
 			isa = PBXGroup;
 			children = (
 				F8C60E7113C78E94008EDC3B /* Mocks */,
-				F89E69D91390376C00B24D7D /* TimerSpec.m */,
+				F89E69D91390376C00B24D7D /* RemainingTimeSpec.m */,
 				F89E6A0D13903E9800B24D7D /* PomodoroViewControllerSpec.m */,
+				F88530DF13CC85BD0026B42B /* TimerSpec.m */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -222,8 +236,10 @@
 		F8C60E7113C78E94008EDC3B /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				F8C60E7413C78F73008EDC3B /* MockPomodoro.h */,
-				F8C60E7513C78F73008EDC3B /* MockPomodoro.m */,
+				F8C60E7413C78F73008EDC3B /* MockRemainingTime.h */,
+				F8C60E7513C78F73008EDC3B /* MockRemainingTime.m */,
+				F8405ADB13CDD43B003B14BD /* MockTimerDelegate.h */,
+				F8405ADC13CDD43B003B14BD /* MockTimerDelegate.m */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -242,7 +258,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F89E69DC1390393D00B24D7D /* PBXTargetDependency */,
+				F82B2C5E13CE604300D61FCB /* PBXTargetDependency */,
 			);
 			name = Pomodoro;
 			productName = Pomodoro;
@@ -337,7 +353,8 @@
 				F89E693913902DF200B24D7D /* main.m in Sources */,
 				F89E693C13902DF200B24D7D /* PomodoroAppDelegate.m in Sources */,
 				F89E694213902DF200B24D7D /* PomodoroViewController.m in Sources */,
-				F89E69DF13903CE100B24D7D /* Timer.m in Sources */,
+				F89E69DF13903CE100B24D7D /* RemainingTime.m in Sources */,
+				F88530E313CC86630026B42B /* Timer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F88530E613CC89E30026B42B /* Timer.m in Sources */,
 				F89E699713902F9B00B24D7D /* OCDSpecDescription.m in Sources */,
 				F89E699813902F9B00B24D7D /* OCDSpecDescriptionRunner.m in Sources */,
 				F89E699913902F9B00B24D7D /* OCDSpecExample.m in Sources */,
@@ -353,22 +371,24 @@
 				F89E699C13902F9B00B24D7D /* OCDSpecOutputter+RedirectOutput.m in Sources */,
 				F89E699D13902F9B00B24D7D /* OCDSpecOutputter.m in Sources */,
 				F89E699E13902F9B00B24D7D /* OCDSpecSharedResults.m in Sources */,
-				F89E69DA1390376C00B24D7D /* TimerSpec.m in Sources */,
-				F89E69E013903CE100B24D7D /* Timer.m in Sources */,
+				F89E69DA1390376C00B24D7D /* RemainingTimeSpec.m in Sources */,
+				F89E69E013903CE100B24D7D /* RemainingTime.m in Sources */,
 				F89E6A0E13903E9800B24D7D /* PomodoroViewControllerSpec.m in Sources */,
 				F89E6A0F1390425A00B24D7D /* PomodoroViewController.m in Sources */,
-				F8C60E7613C78F73008EDC3B /* MockPomodoro.m in Sources */,
+				F8C60E7613C78F73008EDC3B /* MockRemainingTime.m in Sources */,
 				F84D418313C7973600161BBF /* unitTestMain.m in Sources */,
+				F88530E013CC85BD0026B42B /* TimerSpec.m in Sources */,
+				F8405ADD13CDD43B003B14BD /* MockTimerDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F89E69DC1390393D00B24D7D /* PBXTargetDependency */ = {
+		F82B2C5E13CE604300D61FCB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F89E695F13902EDE00B24D7D /* UnitTests */;
-			targetProxy = F89E69DB1390393D00B24D7D /* PBXContainerItemProxy */;
+			targetProxy = F82B2C5D13CE604300D61FCB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

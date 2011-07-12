@@ -1,9 +1,10 @@
 #import "PomodoroViewController.h"
+#import "RemainingTime.h"
 #import "Timer.h"
 
 @implementation PomodoroViewController
 
-@synthesize timerLabel, timer, pomo;
+@synthesize timerLabel, timer;
 
 -(void) dealloc {
     [super dealloc];
@@ -15,28 +16,35 @@
  
 -(void) viewDidLoad {
     [super viewDidLoad];
-    self.pomo = [[Timer alloc] initWithDuration: 3];
-    self.timerLabel.text =  [pomo stringFormatTimeLeftAt: nil];
+    self.timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
 }
 
 -(void) viewDidUnload {
     [super viewDidUnload];
-    [self.pomo release];
 }
 
 -(BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(IBAction) startTimer {
-    [self.pomo startAt: [NSDate date]];
-    [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(refreshTimerLabel) userInfo: nil repeats: YES];
-    [self refreshTimerLabel];
+-(IBAction) startPomodoro {
+   timer = [Timer startWithDuration: POMODORO_DURATION target: self selector: @selector(startSnooze)];
 }
 
--(void) refreshTimerLabel {
-    NSDate* now = [NSDate date];
-    self.timerLabel.text = [pomo stringFormatTimeLeftAt: now];
+-(void) startSnooze {
+    timer = [Timer startWithDuration: SNOOZE_DURATION target: self selector: @selector(startSnooze)];
+}
+
+-(void) startBreak {
+    timer = [Timer startWithDuration: BREAK_DURATION target: self selector: @selector(breakEnded)];
+}
+
+-(void) breakEnded {
+    
+}
+
+-(void) remainingTimeDidChange:(NSNumber*)remainingSeconds {
+    self.timerLabel.text = [RemainingTime stringFormatForDuration: [remainingSeconds intValue]];
 }
 
 @end

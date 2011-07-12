@@ -1,57 +1,42 @@
 #import "Timer.h"
+#import "RemainingTime.h"
+#import "TimerDelegate.h"
 
 @implementation Timer
 
-@synthesize duration, startingTime;
+@synthesize remainingTime, target, selector, lastRemainingTime, countdown;
 
--(id) initWithDuration: (int) givenDuration {
-    if ((self = [super init])) {
-        self.duration = [NSNumber numberWithInt: givenDuration];
++(id) startWithDuration:(int)duration target:(NSObject<TimerDelegate>*)target selector:(SEL)selector {
+    Timer* timer = [[[Timer alloc] init] autorelease];
+    timer.remainingTime = [[RemainingTime alloc] initWithDuration: duration];
+    [timer.remainingTime startAt: [NSDate date]];
+    timer.target = target;
+    timer.selector = selector;
+    timer.countdown = [NSTimer scheduledTimerWithTimeInterval: 0.25 target: timer selector: @selector(checkRemainingTime) userInfo: nil repeats: YES];
+    return timer;
+}
+
+-(void) checkRemainingTime {
+    NSDate* now = [NSDate date];
+    int newRemainingTime = [remainingTime totalSecondsRemainingAt: now];
+    if (newRemainingTime != lastRemainingTime) {
+        lastRemainingTime = newRemainingTime;
+        [target remainingTimeDidChange: [NSNumber numberWithInt: newRemainingTime]];
     }
-    return self;
-}
-
--(id) init {
-    if ((self == [super init])) {
-        self.duration = [NSNumber numberWithInt: 25*60];
-    }
-    return self;
-}
-
--(void) startAt:(NSDate *)givenTime {
-    self.startingTime = givenTime;
-}
-
--(NSNumber*) minutesRemainingAt:(NSDate *)givenTime {
-    return [NSNumber numberWithInt: ([self totalSecondsRemainingAt: givenTime] / 60)];
-}
-
--(NSNumber*) secondsRemainingAt:(NSDate *)givenTime {
-    return [NSNumber numberWithInt: ([self totalSecondsRemainingAt: givenTime] % 60)];
-}
-
--(BOOL) isOverAt:(NSDate*) givenTime {
-    return ([self totalSecondsRemainingAt: givenTime] <= 0);
-}
-
--(int) totalSecondsRemainingAt:(NSDate *)givenTime {
-    if (startingTime == nil) {
-        return [duration intValue];
-    } else {
-        NSTimeInterval elapsedTime = [givenTime timeIntervalSinceDate: startingTime];
-        return [duration intValue] - elapsedTime;
+    if (newRemainingTime <= 0) {
+        [target performSelector: selector];
+        [countdown invalidate];
     }
 }
 
--(NSString*) stringFormatTimeLeftAt: (NSDate*) givenTime {
-    return [NSString stringWithFormat: @"%d:%02d",
-            [[self minutesRemainingAt: givenTime] intValue],
-            [[self secondsRemainingAt: givenTime] intValue]];
+-(NSNumber*) duration {
+    return self.remainingTime.duration;
 }
 
 -(void) dealloc {
-    [duration release];
-    [startingTime release];
+    [remainingTime release];
+    [target release];
+    [countdown release];
     [super dealloc];
 }
 
