@@ -1,5 +1,5 @@
 #import "PomodoroViewController.h"
-#import "Pomodoro.h"
+#import "Timer.h"
 
 @implementation PomodoroViewController
 
@@ -15,7 +15,7 @@
  
 -(void) viewDidLoad {
     [super viewDidLoad];
-    self.pomo = [[Pomodoro alloc] initWithDuration: 15*60];
+    self.pomo = [[Timer alloc] initWithDuration: 3];
     self.timerLabel.text =  [pomo stringFormatTimeLeftAt: nil];
 }
 

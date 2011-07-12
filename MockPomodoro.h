@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
-#import "PomodoroProtocol.h"
+#import "TimerProtocol.h"
 
-@interface MockPomodoro : NSObject<PomodoroProtocol> {
+@interface MockPomodoro : NSObject<TimerProtocol> {
     int minutesRemaining;
     int secondsRemaining;
     NSString* formattedTime;

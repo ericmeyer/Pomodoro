@@ -27,9 +27,9 @@
 		F89E699D13902F9B00B24D7D /* OCDSpecOutputter.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E699113902F9B00B24D7D /* OCDSpecOutputter.m */; };
 		F89E699E13902F9B00B24D7D /* OCDSpecSharedResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E699313902F9B00B24D7D /* OCDSpecSharedResults.m */; };
 		F89E69D51390337200B24D7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E69D41390337200B24D7D /* UIKit.framework */; };
-		F89E69DA1390376C00B24D7D /* PomodoroSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69D91390376C00B24D7D /* PomodoroSpec.m */; };
-		F89E69DF13903CE100B24D7D /* Pomodoro.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69DE13903CE000B24D7D /* Pomodoro.m */; };
-		F89E69E013903CE100B24D7D /* Pomodoro.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69DE13903CE000B24D7D /* Pomodoro.m */; };
+		F89E69DA1390376C00B24D7D /* TimerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69D91390376C00B24D7D /* TimerSpec.m */; };
+		F89E69DF13903CE100B24D7D /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69DE13903CE000B24D7D /* Timer.m */; };
+		F89E69E013903CE100B24D7D /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E69DE13903CE000B24D7D /* Timer.m */; };
 		F89E6A0E13903E9800B24D7D /* PomodoroViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E6A0D13903E9800B24D7D /* PomodoroViewControllerSpec.m */; };
 		F89E6A0F1390425A00B24D7D /* PomodoroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E694113902DF200B24D7D /* PomodoroViewController.m */; };
 		F8C60E7613C78F73008EDC3B /* MockPomodoro.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C60E7513C78F73008EDC3B /* MockPomodoro.m */; };
@@ -82,11 +82,11 @@
 		F89E699513902F9B00B24D7D /* DescriptionRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionRunner.h; sourceTree = "<group>"; };
 		F89E699613902F9B00B24D7D /* Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example.h; sourceTree = "<group>"; };
 		F89E69D41390337200B24D7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F89E69D91390376C00B24D7D /* PomodoroSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PomodoroSpec.m; path = Specs/PomodoroSpec.m; sourceTree = SOURCE_ROOT; };
-		F89E69DD13903CE000B24D7D /* Pomodoro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pomodoro.h; sourceTree = "<group>"; };
-		F89E69DE13903CE000B24D7D /* Pomodoro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pomodoro.m; sourceTree = "<group>"; };
+		F89E69D91390376C00B24D7D /* TimerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerSpec.m; path = Specs/TimerSpec.m; sourceTree = SOURCE_ROOT; };
+		F89E69DD13903CE000B24D7D /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Timer.h; sourceTree = "<group>"; };
+		F89E69DE13903CE000B24D7D /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
 		F89E6A0D13903E9800B24D7D /* PomodoroViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PomodoroViewControllerSpec.m; path = Specs/PomodoroViewControllerSpec.m; sourceTree = SOURCE_ROOT; };
-		F8C60E7313C78EB6008EDC3B /* PomodoroProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PomodoroProtocol.h; sourceTree = "<group>"; };
+		F8C60E7313C78EB6008EDC3B /* TimerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerProtocol.h; sourceTree = "<group>"; };
 		F8C60E7413C78F73008EDC3B /* MockPomodoro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockPomodoro.h; sourceTree = SOURCE_ROOT; };
 		F8C60E7513C78F73008EDC3B /* MockPomodoro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockPomodoro.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -155,9 +155,9 @@
 				F89E694113902DF200B24D7D /* PomodoroViewController.m */,
 				F89E694313902DF200B24D7D /* PomodoroViewController.xib */,
 				F89E693213902DF200B24D7D /* Supporting Files */,
-				F89E69DD13903CE000B24D7D /* Pomodoro.h */,
-				F89E69DE13903CE000B24D7D /* Pomodoro.m */,
-				F8C60E7313C78EB6008EDC3B /* PomodoroProtocol.h */,
+				F89E69DD13903CE000B24D7D /* Timer.h */,
+				F89E69DE13903CE000B24D7D /* Timer.m */,
+				F8C60E7313C78EB6008EDC3B /* TimerProtocol.h */,
 			);
 			path = Pomodoro;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				F8C60E7113C78E94008EDC3B /* Mocks */,
-				F89E69D91390376C00B24D7D /* PomodoroSpec.m */,
+				F89E69D91390376C00B24D7D /* TimerSpec.m */,
 				F89E6A0D13903E9800B24D7D /* PomodoroViewControllerSpec.m */,
 			);
 			path = UnitTests;
@@ -337,7 +337,7 @@
 				F89E693913902DF200B24D7D /* main.m in Sources */,
 				F89E693C13902DF200B24D7D /* PomodoroAppDelegate.m in Sources */,
 				F89E694213902DF200B24D7D /* PomodoroViewController.m in Sources */,
-				F89E69DF13903CE100B24D7D /* Pomodoro.m in Sources */,
+				F89E69DF13903CE100B24D7D /* Timer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,8 +353,8 @@
 				F89E699C13902F9B00B24D7D /* OCDSpecOutputter+RedirectOutput.m in Sources */,
 				F89E699D13902F9B00B24D7D /* OCDSpecOutputter.m in Sources */,
 				F89E699E13902F9B00B24D7D /* OCDSpecSharedResults.m in Sources */,
-				F89E69DA1390376C00B24D7D /* PomodoroSpec.m in Sources */,
-				F89E69E013903CE100B24D7D /* Pomodoro.m in Sources */,
+				F89E69DA1390376C00B24D7D /* TimerSpec.m in Sources */,
+				F89E69E013903CE100B24D7D /* Timer.m in Sources */,
 				F89E6A0E13903E9800B24D7D /* PomodoroViewControllerSpec.m in Sources */,
 				F89E6A0F1390425A00B24D7D /* PomodoroViewController.m in Sources */,
 				F8C60E7613C78F73008EDC3B /* MockPomodoro.m in Sources */,

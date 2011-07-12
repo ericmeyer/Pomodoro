@@ -1,6 +1,6 @@
-#import "Pomodoro.h"
+#import "Timer.h"
 
-@implementation Pomodoro
+@implementation Timer
 
 @synthesize duration, startingTime;
 

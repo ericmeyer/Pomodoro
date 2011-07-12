@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@protocol PomodoroProtocol <NSObject>
+@protocol TimerProtocol <NSObject>
 
 -(void) startAt: (NSDate*) givenTime;
 -(NSNumber*) minutesRemainingAt: (NSDate*) givenTime;

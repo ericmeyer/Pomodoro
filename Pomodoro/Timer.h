@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
-#import "PomodoroProtocol.h"
+#import "TimerProtocol.h"
 
-@interface Pomodoro : NSObject<PomodoroProtocol> {
+@interface Timer : NSObject<TimerProtocol> {
     NSNumber* duration;
     NSDate* startingTime;
 }
