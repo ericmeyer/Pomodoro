@@ -9,7 +9,6 @@
 +(id) startWithDuration:(int)duration target:(NSObject<TimerDelegate>*)target selector:(SEL)selector {
     Timer* timer = [[[Timer alloc] init] autorelease];
     timer.remainingTime = [[RemainingTime alloc] initWithDuration: duration];
-    [timer.remainingTime startAt: [NSDate date]];
     timer.target = target;
     timer.selector = selector;
     timer.countdown = [NSTimer scheduledTimerWithTimeInterval: 0.25 target: timer selector: @selector(checkRemainingTime) userInfo: nil repeats: YES];
@@ -18,7 +17,7 @@
 
 -(void) checkRemainingTime {
     NSDate* now = [NSDate date];
-    int newRemainingTime = [remainingTime totalSecondsRemainingAt: now];
+    int newRemainingTime = [remainingTime remainingSecondsAt: now];
     if (newRemainingTime != lastRemainingTime) {
         lastRemainingTime = newRemainingTime;
         [target remainingTimeDidChange: [NSNumber numberWithInt: newRemainingTime]];
@@ -33,7 +32,14 @@
     return self.remainingTime.duration;
 }
 
+-(void) cancel {
+    [countdown invalidate];
+}
+
 -(void) dealloc {
+    if ([countdown isValid]) {
+        [countdown invalidate];
+    }
     [remainingTime release];
     [target release];
     [countdown release];

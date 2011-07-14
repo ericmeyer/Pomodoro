@@ -18,6 +18,11 @@ CONTEXT(Timer)
                     Timer* timer = [Timer startWithDuration: 60 target: nil selector: @selector(someSelector)];
                     expectFalse(timer.selector == nil);
                 }),
+             it(@"has a valid countdown",
+                ^{
+                    Timer* timer = [Timer startWithDuration: 10 target: nil selector: @selector(someSelector)];
+                    expectTruth([timer.countdown isValid]);
+                }),
              it(@"notifies the delegate that time time changes the first check", 
                 ^{
                     MockTimerDelegate* delegate = [[[MockTimerDelegate alloc] init] autorelease];
@@ -80,6 +85,12 @@ CONTEXT(Timer)
                     [timer checkRemainingTime];
                     
                     expectTruth(delegate.timerEndedCalled);
+                }),
+             it(@"invalidates the countdown on cancel",
+                ^{
+                    Timer* timer = [Timer startWithDuration: 10 target: nil selector: @selector(someSelector)];
+                    [timer cancel];
+                    expectFalse([timer.countdown isValid]);
                 }),
              nil);
 }

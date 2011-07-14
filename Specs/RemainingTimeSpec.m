@@ -1,37 +1,28 @@
 #import "OCDSpec/OCDSpec.h"
 #import "RemainingTime.h"
 
-CONTEXT(ReaminingTime)
+CONTEXT(remainingTime)
 {
-    describe(@"ReaminingTime",
+    describe(@"remainingTime",
         it(@"has a duration", 
             ^{
-                RemainingTime* reaminingTime = [[[RemainingTime alloc] initWithDuration: 12345] autorelease];
-                [expect(reaminingTime.duration) toBeEqualTo: [NSNumber numberWithInt: 12345]];
+                RemainingTime* remainingTime = [[[RemainingTime alloc] initWithDuration: 12345] autorelease];
+                [expect(remainingTime.duration) toBeEqualTo: [NSNumber numberWithInt: 12345]];
             }),
-        it(@"is not over while time remains",
+        it(@"has a starting time",
            ^{
-               RemainingTime* reaminingTime = [[[RemainingTime alloc] initWithDuration: 25*60] autorelease];
-               NSDate* now = [NSDate date];
-               [reaminingTime startAt: now];
-               expectFalse([reaminingTime isOverAt: now]);
+               RemainingTime* remainingTime = [[[RemainingTime alloc] initWithDuration: 123] autorelease];
+               expectFalse(remainingTime.startingTime == nil);
            }),
-        it(@"is over when the exact duration elaspses",
+        it(@"has seconds remaining",
            ^{
-               RemainingTime* reaminingTime = [[[RemainingTime alloc] initWithDuration: 25*60] autorelease];
+               RemainingTime* remainingTime = [[[RemainingTime alloc] initWithDuration: 300] autorelease];
                NSDate* now = [NSDate date];
-               NSDate* end = [NSDate dateWithTimeInterval: [reaminingTime.duration intValue] sinceDate: now];
-               [reaminingTime startAt: now];
-               expectTruth([reaminingTime isOverAt: end]);
+               NSDate* later = [NSDate dateWithTimeInterval: 125 sinceDate: now];
+               remainingTime.startingTime = now;
+               [expect([NSNumber numberWithInt: [remainingTime remainingSecondsAt: later]])
+                                   toBeEqualTo: [NSNumber numberWithInt: 175]];
            }),
-         it(@"is over more than the duration elapses",
-            ^{
-                RemainingTime* reaminingTime = [[[RemainingTime alloc] initWithDuration: 25*60] autorelease];
-                NSDate* now = [NSDate date];
-                NSDate* end = [NSDate dateWithTimeInterval: ([reaminingTime.duration intValue]+100) sinceDate: now];
-                [reaminingTime startAt: now];
-                expectTruth([reaminingTime isOverAt: end]);
-            }),
         it(@"has a formatted time left for double digit seconds",
            ^{
                [expect([RemainingTime stringFormatForDuration: 19*60+35]) toBeEqualTo: @"19:35"];

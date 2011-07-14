@@ -19,5 +19,6 @@
 
 +(id) startWithDuration: (int) duration target: (NSObject<TimerDelegate>*) target selector: (SEL) selector;
 -(void) checkRemainingTime;
+-(void) cancel;
 
 @end
