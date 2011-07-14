@@ -2,9 +2,9 @@
 #import "TimerDelegate.h"
 #import "Timer.h"
 
-#define POMODORO_DURATION 4
-#define SNOOZE_DURATION 3
-#define BREAK_DURATION 3
+#define POMODORO_DURATION 25*60
+#define SNOOZE_DURATION 1*60
+#define BREAK_DURATION 5*60
 
 @interface PomodoroViewController : UIViewController<TimerDelegate> {
     UILabel* timerLabel;
