@@ -17,7 +17,7 @@
 
 -(void) checkRemainingTime {
     NSDate* now = [NSDate date];
-    int newRemainingTime = [remainingTime remainingSecondsAt: now];
+    int newRemainingTime = [[remainingTime remainingSecondsAt: now] intValue];
     if (newRemainingTime != lastRemainingTime) {
         lastRemainingTime = newRemainingTime;
         [target remainingTimeDidChange: [NSNumber numberWithInt: newRemainingTime]];

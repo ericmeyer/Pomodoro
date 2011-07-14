@@ -4,6 +4,6 @@
 
 @property (nonatomic, retain) NSNumber* duration;
 
--(int) remainingSecondsAt: (NSDate*) givenTime;
+-(NSNumber*) remainingSecondsAt: (NSDate*) givenTime;
 
 @end

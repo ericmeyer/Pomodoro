@@ -16,9 +16,9 @@
     return self;
 }
 
--(int) remainingSecondsAt:(NSDate *)givenTime {
+-(NSNumber*) remainingSecondsAt:(NSDate *)givenTime {
     NSTimeInterval elapsedTime = [givenTime timeIntervalSinceDate: startingTime];
-    return [duration intValue] - elapsedTime;
+    return [NSNumber numberWithInt: [duration intValue] - elapsedTime];
 }
 
 -(void) dealloc {

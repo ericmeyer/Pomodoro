@@ -11,8 +11,8 @@
     return self;
 }
 
--(int) remainingSecondsAt:(NSDate*) givenTime {
-    return totalSecondsRemaining;
+-(NSNumber*) remainingSecondsAt:(NSDate*) givenTime {
+    return [NSNumber numberWithInt: totalSecondsRemaining];
 }
 
 @end

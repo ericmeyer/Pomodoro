@@ -20,8 +20,7 @@ CONTEXT(remainingTime)
                NSDate* now = [NSDate date];
                NSDate* later = [NSDate dateWithTimeInterval: 125 sinceDate: now];
                remainingTime.startingTime = now;
-               [expect([NSNumber numberWithInt: [remainingTime remainingSecondsAt: later]])
-                                   toBeEqualTo: [NSNumber numberWithInt: 175]];
+               [expect([remainingTime remainingSecondsAt: later]) toBeEqualTo: [NSNumber numberWithInt: 175]];
            }),
         it(@"has a formatted time left for double digit seconds",
            ^{
