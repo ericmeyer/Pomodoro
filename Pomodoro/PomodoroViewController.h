@@ -14,6 +14,8 @@
 @property (nonatomic, retain) Timer* timer;
 
 -(IBAction) startPomodoro;
+-(IBAction) pausePomodoro;
+-(IBAction) resumePomodoro;
 -(void) startSnooze;
 -(void) startBreak;
 

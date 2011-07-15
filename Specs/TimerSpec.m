@@ -92,5 +92,33 @@ CONTEXT(Timer)
                     [timer cancel];
                     expectFalse([timer.countdown isValid]);
                 }),
-             nil);
+             it(@"pauses the timer",
+                ^{
+                    Timer* timer = [Timer startWithDuration: 60 target: nil selector: nil];
+                    MockRemainingTime* remainingTime = [[[MockRemainingTime alloc] init] autorelease];
+                    timer.remainingTime = remainingTime;
+                    
+                    [timer pause];
+                    
+                    expectTruth(remainingTime.wasPauseCalled);
+                }),
+             it(@"resumes the timer",
+                ^{
+                    Timer* timer = [Timer startWithDuration: 60 target: nil selector: nil];
+                    MockRemainingTime* remainingTime = [[[MockRemainingTime alloc] init] autorelease];
+                    timer.remainingTime = remainingTime;
+                    
+                    [timer resume];
+                    
+                    expectTruth(remainingTime.wasResumeCalled);
+                }),
+//             it(@"does not pause if already paused",
+//                ^{
+//                    FAIL(@"write test for pausing when paused");
+//                }),
+//             it(@"does not resume if already running",
+//                ^{
+//                    FAIL(@"write test for resuming when ticking");
+//                }),
+            nil);
 }

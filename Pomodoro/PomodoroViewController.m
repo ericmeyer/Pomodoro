@@ -31,6 +31,14 @@
    timer = [Timer startWithDuration: POMODORO_DURATION target: self selector: @selector(startSnooze)];
 }
 
+-(IBAction) pausePomodoro {
+    [timer pause];
+}
+
+-(IBAction) resumePomodoro {
+    [timer resume];
+}
+
 -(void) startSnooze {
     timer = [Timer startWithDuration: SNOOZE_DURATION target: self selector: @selector(startSnooze)];
 }
