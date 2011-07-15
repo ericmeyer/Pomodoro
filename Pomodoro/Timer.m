@@ -4,7 +4,7 @@
 
 @implementation Timer
 
-@synthesize remainingTime, target, selector, lastRemainingTime, countdown;
+@synthesize remainingTime, target, selector, lastRemainingTime, countdown, isPaused;
 
 +(id) startWithDuration:(int)duration target:(NSObject<TimerDelegate>*)target selector:(SEL)selector {
     Timer* timer = [[[Timer alloc] init] autorelease];
@@ -16,9 +16,11 @@
 }
 -(void) pause {
     [remainingTime pauseAt: [NSDate date]];
+    isPaused = YES;
 }
 -(void) resume {
     [remainingTime resumeAt: [NSDate date]];
+    isPaused = NO;
 }
 
 -(void) checkRemainingTime {

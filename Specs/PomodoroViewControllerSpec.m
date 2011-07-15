@@ -54,5 +54,22 @@ CONTEXT(PomodoroViewController)
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
                     [controller breakEnded];
                 }),
+             it(@"pauses the timer",
+                ^{
+                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    [controller startPomodoro];
+                    [controller pausePomodoro];
+                    
+                    expectTruth(controller.timer.isPaused);
+                }),
+             it(@"resumes the timer",
+                ^{
+                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    [controller startPomodoro];
+                    [controller pausePomodoro];
+                    [controller resumePomodoro];
+                    
+                    expectFalse(controller.timer.isPaused);
+                }),
              nil);
 }
