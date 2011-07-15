@@ -2,6 +2,6 @@
 
 @protocol TimerDelegate <NSObject>
 
--(void) remainingTimeDidChange: (NSNumber*) timer;
+-(void) remainingTimeDidChange: (NSNumber*) remainingSeconds;
 
 @end
