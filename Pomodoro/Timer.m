@@ -23,6 +23,10 @@
     isPaused = NO;
 }
 
+-(void) cancel {
+    [countdown invalidate];
+}
+
 -(void) checkRemainingTime {
     NSDate* now = [NSDate date];
     int newRemainingTime = [[remainingTime remainingSecondsAt: now] intValue];
@@ -38,10 +42,6 @@
 
 -(NSNumber*) duration {
     return self.remainingTime.duration;
-}
-
--(void) cancel {
-    [countdown invalidate];
 }
 
 -(void) dealloc {

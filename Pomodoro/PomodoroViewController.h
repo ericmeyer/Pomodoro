@@ -7,9 +7,13 @@
 #define BREAK_DURATION 5*60
 
 @interface PomodoroViewController : UIViewController<TimerDelegate> {
+    UILabel* gogo;
+    UILabel* pomodoro;
     UILabel* timerLabel;
     Timer* timer;
 }
+@property (nonatomic, retain) IBOutlet UILabel* gogo;
+@property (nonatomic, retain) IBOutlet UILabel* pomodoro;
 @property (nonatomic, retain) IBOutlet UILabel* timerLabel;
 @property (nonatomic, retain) Timer* timer;
 

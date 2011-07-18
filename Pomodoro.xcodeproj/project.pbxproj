@@ -37,10 +37,16 @@
 		F89E6A0E13903E9800B24D7D /* PomodoroViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E6A0D13903E9800B24D7D /* PomodoroViewControllerSpec.m */; };
 		F89E6A0F1390425A00B24D7D /* PomodoroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F89E694113902DF200B24D7D /* PomodoroViewController.m */; };
 		F8C60E7613C78F73008EDC3B /* MockRemainingTime.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C60E7513C78F73008EDC3B /* MockRemainingTime.m */; };
+		F8EABB7313D0DC6400C98585 /* Comfortaa_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8EABB7013D0DC6400C98585 /* Comfortaa_Bold.ttf */; };
+		F8EABB7413D0DC6400C98585 /* Comfortaa_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8EABB7013D0DC6400C98585 /* Comfortaa_Bold.ttf */; };
+		F8EABB7513D0DC6400C98585 /* Comfortaa_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8EABB7113D0DC6400C98585 /* Comfortaa_Regular.ttf */; };
+		F8EABB7613D0DC6400C98585 /* Comfortaa_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8EABB7113D0DC6400C98585 /* Comfortaa_Regular.ttf */; };
+		F8EABB7713D0DC6400C98585 /* Comfortaa_Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8EABB7213D0DC6400C98585 /* Comfortaa_Thin.ttf */; };
+		F8EABB7813D0DC6400C98585 /* Comfortaa_Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8EABB7213D0DC6400C98585 /* Comfortaa_Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F82B2C5D13CE604300D61FCB /* PBXContainerItemProxy */ = {
+		F85F84FE13D4F0E00092996F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F89E691E13902DF200B24D7D /* Project object */;
 			proxyType = 1;
@@ -99,6 +105,9 @@
 		F8C60E7313C78EB6008EDC3B /* RemainingTimeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemainingTimeProtocol.h; sourceTree = "<group>"; };
 		F8C60E7413C78F73008EDC3B /* MockRemainingTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockRemainingTime.h; sourceTree = SOURCE_ROOT; };
 		F8C60E7513C78F73008EDC3B /* MockRemainingTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockRemainingTime.m; sourceTree = SOURCE_ROOT; };
+		F8EABB7013D0DC6400C98585 /* Comfortaa_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Bold.ttf; sourceTree = "<group>"; };
+		F8EABB7113D0DC6400C98585 /* Comfortaa_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Regular.ttf; sourceTree = "<group>"; };
+		F8EABB7213D0DC6400C98585 /* Comfortaa_Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Thin.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +187,9 @@
 		F89E693213902DF200B24D7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F8EABB7013D0DC6400C98585 /* Comfortaa_Bold.ttf */,
+				F8EABB7113D0DC6400C98585 /* Comfortaa_Regular.ttf */,
+				F8EABB7213D0DC6400C98585 /* Comfortaa_Thin.ttf */,
 				F89E693313902DF200B24D7D /* Pomodoro-Info.plist */,
 				F89E693413902DF200B24D7D /* InfoPlist.strings */,
 				F89E693713902DF200B24D7D /* Pomodoro-Prefix.pch */,
@@ -258,7 +270,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F82B2C5E13CE604300D61FCB /* PBXTargetDependency */,
+				F85F84FF13D4F0E00092996F /* PBXTargetDependency */,
 			);
 			name = Pomodoro;
 			productName = Pomodoro;
@@ -317,6 +329,9 @@
 				F89E693613902DF200B24D7D /* InfoPlist.strings in Resources */,
 				F89E693F13902DF200B24D7D /* MainWindow.xib in Resources */,
 				F89E694513902DF200B24D7D /* PomodoroViewController.xib in Resources */,
+				F8EABB7313D0DC6400C98585 /* Comfortaa_Bold.ttf in Resources */,
+				F8EABB7513D0DC6400C98585 /* Comfortaa_Regular.ttf in Resources */,
+				F8EABB7713D0DC6400C98585 /* Comfortaa_Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +339,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8EABB7413D0DC6400C98585 /* Comfortaa_Bold.ttf in Resources */,
+				F8EABB7613D0DC6400C98585 /* Comfortaa_Regular.ttf in Resources */,
+				F8EABB7813D0DC6400C98585 /* Comfortaa_Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,10 +403,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F82B2C5E13CE604300D61FCB /* PBXTargetDependency */ = {
+		F85F84FF13D4F0E00092996F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F89E695F13902EDE00B24D7D /* UnitTests */;
-			targetProxy = F82B2C5D13CE604300D61FCB /* PBXContainerItemProxy */;
+			targetProxy = F85F84FE13D4F0E00092996F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

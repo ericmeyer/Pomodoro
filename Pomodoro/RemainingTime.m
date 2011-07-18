@@ -22,7 +22,7 @@
 }
 
 -(void) resumeAt:(NSDate*) givenTime {
-    elapsedPauseTime = [givenTime timeIntervalSinceDate: pauseTime];
+    elapsedPauseTime += [givenTime timeIntervalSinceDate: pauseTime];
     [pauseTime release];
     pauseTime = nil;
 }

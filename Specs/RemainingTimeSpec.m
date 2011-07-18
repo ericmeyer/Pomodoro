@@ -1,7 +1,7 @@
 #import "OCDSpec/OCDSpec.h"
 #import "RemainingTime.h"
 
-CONTEXT(remainingTime)
+CONTEXT(RemainingTime)
 {
     describe(@"remainingTime",
         it(@"has a duration", 

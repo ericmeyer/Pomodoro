@@ -4,7 +4,7 @@
 
 @implementation PomodoroViewController
 
-@synthesize timerLabel, timer;
+@synthesize gogo, pomodoro, timerLabel, timer;
 
 -(void) dealloc {
     [super dealloc];
@@ -16,6 +16,8 @@
  
 -(void) viewDidLoad {
     [super viewDidLoad];
+    self.gogo.font = [UIFont fontWithName: @"Comfortaa" size: 42.0];
+    self.pomodoro.font = [UIFont fontWithName: @"Comfortaa" size: 42.0];
     self.timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
 }
 
