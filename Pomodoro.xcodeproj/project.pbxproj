@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F828859313D9F7D200834BA3 /* Podkova-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F828859213D9F7D200834BA3 /* Podkova-Regular.ttf */; };
+		F828859413D9F7D200834BA3 /* Podkova-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F828859213D9F7D200834BA3 /* Podkova-Regular.ttf */; };
 		F8405ADD13CDD43B003B14BD /* MockTimerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8405ADC13CDD43B003B14BD /* MockTimerDelegate.m */; };
 		F84D418313C7973600161BBF /* unitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F84D418113C7973100161BBF /* unitTestMain.m */; };
 		F88530E013CC85BD0026B42B /* TimerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530DF13CC85BD0026B42B /* TimerSpec.m */; };
@@ -56,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F828859213D9F7D200834BA3 /* Podkova-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Podkova-Regular.ttf"; sourceTree = "<group>"; };
 		F8405ADB13CDD43B003B14BD /* MockTimerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockTimerDelegate.h; sourceTree = SOURCE_ROOT; };
 		F8405ADC13CDD43B003B14BD /* MockTimerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockTimerDelegate.m; sourceTree = SOURCE_ROOT; };
 		F8405ADF13CDD45F003B14BD /* TimerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerDelegate.h; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 		F89E693213902DF200B24D7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F828859213D9F7D200834BA3 /* Podkova-Regular.ttf */,
 				F8EABB7013D0DC6400C98585 /* Comfortaa_Bold.ttf */,
 				F8EABB7113D0DC6400C98585 /* Comfortaa_Regular.ttf */,
 				F8EABB7213D0DC6400C98585 /* Comfortaa_Thin.ttf */,
@@ -332,6 +336,7 @@
 				F8EABB7313D0DC6400C98585 /* Comfortaa_Bold.ttf in Resources */,
 				F8EABB7513D0DC6400C98585 /* Comfortaa_Regular.ttf in Resources */,
 				F8EABB7713D0DC6400C98585 /* Comfortaa_Thin.ttf in Resources */,
+				F828859313D9F7D200834BA3 /* Podkova-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +347,7 @@
 				F8EABB7413D0DC6400C98585 /* Comfortaa_Bold.ttf in Resources */,
 				F8EABB7613D0DC6400C98585 /* Comfortaa_Regular.ttf in Resources */,
 				F8EABB7813D0DC6400C98585 /* Comfortaa_Thin.ttf in Resources */,
+				F828859413D9F7D200834BA3 /* Podkova-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

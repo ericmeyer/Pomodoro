@@ -11,7 +11,7 @@
     timer.remainingTime = [[RemainingTime alloc] initWithDuration: duration];
     timer.target = target;
     timer.selector = selector;
-    timer.countdown = [NSTimer scheduledTimerWithTimeInterval: 0.5 target: timer selector: @selector(checkRemainingTime) userInfo: nil repeats: YES];
+    timer.countdown = [NSTimer scheduledTimerWithTimeInterval: 0.25 target: timer selector: @selector(checkRemainingTime) userInfo: nil repeats: YES];
     return timer;
 }
 -(void) pause {
