@@ -2,6 +2,8 @@
 #import "RemainingTime.h"
 #import "Timer.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 @interface PomodoroViewController ()
 
 -(void) changeButtonTargetTo: (SEL) selector withText:(NSString*)text;
@@ -26,6 +28,7 @@
     self.pomodoro.font = [UIFont fontWithName: @"Comfortaa" size: 42.0];
     self.timerLabel.font = [UIFont fontWithName: @"Podkova" size: 112.0];
     self.timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
+    [self.button.titleLabel setFont: [UIFont fontWithName: @"Jura" size: 30.0]];
 }
 
 -(void) viewDidUnload {
