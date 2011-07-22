@@ -23,6 +23,14 @@ CONTEXT(Timer)
                     Timer* timer = [Timer startWithDuration: 10 target: nil selector: @selector(someSelector)];
                     expectTruth([timer.countdown isValid]);
                 }),
+             it(@"informs the target that the remaining time did change with the duration",
+                ^{
+                    MockTimerDelegate* delegate = [[[MockTimerDelegate alloc] init] autorelease];
+                    [Timer startWithDuration: 123 target: delegate selector: @selector(someSelector)];
+                    
+                    expectTruth(delegate.remainingTimeDidChangeWasCalled);
+                    [expect(delegate.remainingTimeDidChangeCalledWith) toBeEqualTo: [NSNumber numberWithInt: 123]];
+                }),
              it(@"notifies the delegate that time time changes the first check", 
                 ^{
                     MockTimerDelegate* delegate = [[[MockTimerDelegate alloc] init] autorelease];
@@ -30,7 +38,7 @@ CONTEXT(Timer)
                     
                     [timer checkRemainingTime];
                     
-                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 1]];
+                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 2]];
                 }),
              it(@"passes in the remaining seconds when notifying of time change",
                 ^{
@@ -57,7 +65,7 @@ CONTEXT(Timer)
                     remainingTime.totalSecondsRemaining = 59;
                     [timer checkRemainingTime];
                     
-                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 2]];
+                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 3]];
                 }),
              it(@"does not notify the delegate a second time if the time has not changed",
                 ^{
@@ -71,7 +79,7 @@ CONTEXT(Timer)
                     [timer checkRemainingTime];
                     [timer checkRemainingTime];
                     
-                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 1]];
+                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 2]];
                 }),
              it(@"performs the given selector if the time ends",
                 ^{

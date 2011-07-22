@@ -2,7 +2,7 @@
 #import "TimerDelegate.h"
 #import "Timer.h"
 
-#define TESTING_TIMING 0
+#define TESTING_TIMING 1
 
 #if TESTING_TIMING
     #define POMODORO_DURATION 8

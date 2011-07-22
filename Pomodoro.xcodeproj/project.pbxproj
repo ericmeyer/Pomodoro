@@ -48,7 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F85F84FE13D4F0E00092996F /* PBXContainerItemProxy */ = {
+		F8ABE91513DA13F600608F8E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F89E691E13902DF200B24D7D /* Project object */;
 			proxyType = 1;
@@ -274,7 +274,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F85F84FF13D4F0E00092996F /* PBXTargetDependency */,
+				F8ABE91613DA13F600608F8E /* PBXTargetDependency */,
 			);
 			name = Pomodoro;
 			productName = Pomodoro;
@@ -409,10 +409,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F85F84FF13D4F0E00092996F /* PBXTargetDependency */ = {
+		F8ABE91613DA13F600608F8E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F89E695F13902EDE00B24D7D /* UnitTests */;
-			targetProxy = F85F84FE13D4F0E00092996F /* PBXContainerItemProxy */;
+			targetProxy = F8ABE91513DA13F600608F8E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

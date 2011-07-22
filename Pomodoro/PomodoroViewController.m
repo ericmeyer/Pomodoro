@@ -59,7 +59,7 @@
 }
 
 -(void) breakEnded {
-    
+    [self changeButtonTargetTo: @selector(startPomodoro) withText:@"start task"];
 }
 
 -(void) remainingTimeDidChange:(NSNumber*)remainingSeconds {

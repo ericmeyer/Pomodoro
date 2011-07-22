@@ -160,10 +160,26 @@ CONTEXT(PomodoroViewController)
                     
                     expectFalse([oldTimer.countdown isValid]);
                 }),
-             it(@"responds to breakEnded",
+             it(@"changes the button text to start task when a break ends",
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    controller.button = [[UIButton alloc] init];
                     [controller breakEnded];
+                    
+                    NSString* title = controller.button.titleLabel.text;
+                    [expect(title) toBeEqualTo: @"start task"];
+                }),
+             it(@"changes the button to restart the pomodoro when the break ends",
+                ^{
+                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    controller.button = [[UIButton alloc] init];
+                    
+                    [controller startBreak];
+                    [controller breakEnded];
+                    
+                    NSArray* actions = [controller.button actionsForTarget: controller forControlEvent: UIControlEventTouchUpInside];
+                    [expect([NSNumber numberWithInt: [actions count]]) toBeEqualTo: [NSNumber numberWithInt: 1]];
+                    [expect([actions objectAtIndex: 0]) toBeEqualTo: @"startPomodoro"];
                 }),
              nil);
 }

@@ -3,12 +3,12 @@
 
 @interface MockTimerDelegate : NSObject<TimerDelegate> {
     BOOL remainingTimeDidChangeWasCalled;
-    id remainingTimeDidChangeCalledWith;
+    NSNumber* remainingTimeDidChangeCalledWith;
     int count;
     BOOL timerEndedCalled;
 }
 @property (nonatomic) BOOL remainingTimeDidChangeWasCalled;
-@property (nonatomic, retain) id remainingTimeDidChangeCalledWith;
+@property (nonatomic, retain) NSNumber* remainingTimeDidChangeCalledWith;
 @property (nonatomic) int count;
 @property (nonatomic, readonly) NSNumber* remainingTimeDidChangeWasCalledTimes;
 @property (nonatomic) BOOL timerEndedCalled;

@@ -13,9 +13,9 @@
     return self;
 }
 
--(void) remainingTimeDidChange: (id) timer {
+-(void) remainingTimeDidChange: (NSNumber*) remainingSeconds {
     remainingTimeDidChangeWasCalled = YES;
-    remainingTimeDidChangeCalledWith = timer;
+    self.remainingTimeDidChangeCalledWith = remainingSeconds;
     count = count + 1;
 }
 
