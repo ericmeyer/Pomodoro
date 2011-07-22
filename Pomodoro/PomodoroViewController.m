@@ -53,7 +53,7 @@
 }
 
 -(void) startBreak {
-//    [timer cancel];
+    [timer cancel];
     timer = [Timer startWithDuration: BREAK_DURATION target: self selector: @selector(breakEnded)];
     [self changeButtonTargetTo: @selector(cancelPomodoro) withText:@"cancel"];
 }

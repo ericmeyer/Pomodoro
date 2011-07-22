@@ -150,9 +150,15 @@ CONTEXT(PomodoroViewController)
                     [expect([NSNumber numberWithInt: [actions count]]) toBeEqualTo: [NSNumber numberWithInt: 1]];
                     [expect([actions objectAtIndex: 0]) toBeEqualTo: @"cancelPomodoro"];
                 }),
-             it(@"cancels the old timer before starting the break",
+             it(@"cancels the old timer before starting the break on start break",
                 ^{
+                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    [controller startSnooze];
+                    Timer* oldTimer = controller.timer;
+
+                    [controller startBreak];
                     
+                    expectFalse([oldTimer.countdown isValid]);
                 }),
              it(@"responds to breakEnded",
                 ^{
