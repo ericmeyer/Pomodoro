@@ -49,10 +49,13 @@
 
 -(void) startSnooze {
     timer = [Timer startWithDuration: SNOOZE_DURATION target: self selector: @selector(startSnooze)];
+    [self changeButtonTargetTo: @selector(startBreak) withText:@"start break"];
 }
 
 -(void) startBreak {
+//    [timer cancel];
     timer = [Timer startWithDuration: BREAK_DURATION target: self selector: @selector(breakEnded)];
+    [self changeButtonTargetTo: @selector(cancelPomodoro) withText:@"cancel"];
 }
 
 -(void) breakEnded {

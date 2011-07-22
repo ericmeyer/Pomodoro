@@ -102,6 +102,25 @@ CONTEXT(PomodoroViewController)
                     [expect(controller.timer.target) toBeEqualTo: controller];
                     [expect(NSStringFromSelector(controller.timer.selector)) toBeEqualTo: NSStringFromSelector(@selector(startSnooze))];
                 }),
+             it(@"changes the text to start break when starting a snooze",
+                ^{
+                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    controller.button = [[UIButton alloc] init];
+                    [controller startSnooze];
+                    
+                    NSString* title = controller.button.titleLabel.text;
+                    [expect(title) toBeEqualTo: @"start break"];
+                }),
+             it(@"changes the button's action to startBreak when starting a snooze",
+                ^{
+                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    controller.button = [[UIButton alloc] init];
+                    [controller startSnooze];
+                    
+                    NSArray* actions = [controller.button actionsForTarget: controller forControlEvent: UIControlEventTouchUpInside];
+                    [expect([NSNumber numberWithInt: [actions count]]) toBeEqualTo: [NSNumber numberWithInt: 1]];
+                    [expect([actions objectAtIndex: 0]) toBeEqualTo: @"startBreak"];
+                }),
              it(@"starts a break",
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
@@ -110,6 +129,30 @@ CONTEXT(PomodoroViewController)
                     [expect(controller.timer.duration) toBeEqualTo: [NSNumber numberWithInt: BREAK_DURATION]];
                     [expect(controller.timer.target) toBeEqualTo: controller];
                     [expect(NSStringFromSelector(controller.timer.selector)) toBeEqualTo: NSStringFromSelector(@selector(breakEnded))];
+                }),
+             it(@"changes the button text to cancel when starting a break",
+                ^{
+                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    controller.button = [[UIButton alloc] init];
+                    [controller startBreak];
+                    
+                    NSString* title = controller.button.titleLabel.text;
+                    [expect(title) toBeEqualTo: @"cancel"];
+                }),
+             it(@"changes the button to a cancel action when the break starts",
+                ^{
+                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    controller.button = [[UIButton alloc] init];
+                    
+                    [controller startBreak];
+                    
+                    NSArray* actions = [controller.button actionsForTarget: controller forControlEvent: UIControlEventTouchUpInside];
+                    [expect([NSNumber numberWithInt: [actions count]]) toBeEqualTo: [NSNumber numberWithInt: 1]];
+                    [expect([actions objectAtIndex: 0]) toBeEqualTo: @"cancelPomodoro"];
+                }),
+             it(@"cancels the old timer before starting the break",
+                ^{
+                    
                 }),
              it(@"responds to breakEnded",
                 ^{
