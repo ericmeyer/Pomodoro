@@ -12,7 +12,7 @@
 
 @implementation PomodoroViewController
 
-@synthesize gogo, pomodoro, timerLabel, timer, button;
+@synthesize timerLabel, timer, button;
 
 -(void) dealloc {
     [super dealloc];
@@ -24,11 +24,8 @@
  
 -(void) viewDidLoad {
     [super viewDidLoad];
-    self.gogo.font = [UIFont fontWithName: @"Comfortaa" size: 42.0];
-    self.pomodoro.font = [UIFont fontWithName: @"Comfortaa" size: 42.0];
-    self.timerLabel.font = [UIFont fontWithName: @"Podkova" size: 112.0];
     self.timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
-    [self.button.titleLabel setFont: [UIFont fontWithName: @"Jura" size: 30.0]];
+    [self.button.titleLabel setFont: [UIFont fontWithName: @"Comfortaa-Bold" size: 19.56]];
 }
 
 -(void) viewDidUnload {
@@ -42,11 +39,16 @@
 -(IBAction) startPomodoro {
     timer = [Timer startWithDuration: POMODORO_DURATION target: self selector: @selector(startSnooze)];
     [self changeButtonTargetTo: @selector(cancelPomodoro) withText:@"cancel"];
+//    UIImage* image = [UIImage imageNamed: @"cancel_button.png"];
+//    CGRect newFrame = self.button.frame;
+//    newFrame.size = CGSizeMake(200, 50.0);
+//    self.button.frame = newFrame;
+//    [self.button setImage: image forState: UIControlStateNormal];
 }
 
 -(IBAction) cancelPomodoro {
     [timer cancel];
-    [self changeButtonTargetTo: @selector(startPomodoro) withText:@"start task"];
+    [self changeButtonTargetTo: @selector(startPomodoro) withText:@"go"];
     timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
 }
 
@@ -62,7 +64,7 @@
 }
 
 -(void) breakEnded {
-    [self changeButtonTargetTo: @selector(startPomodoro) withText:@"start task"];
+    [self changeButtonTargetTo: @selector(startPomodoro) withText:@"go"];
 }
 
 -(void) remainingTimeDidChange:(NSNumber*)remainingSeconds {

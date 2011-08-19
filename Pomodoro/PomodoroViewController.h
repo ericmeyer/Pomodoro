@@ -15,14 +15,10 @@
 #endif
 
 @interface PomodoroViewController : UIViewController<TimerDelegate> {
-    UILabel* gogo;
-    UILabel* pomodoro;
     UILabel* timerLabel;
     Timer* timer;
     UIButton* button;
 }
-@property (nonatomic, retain) IBOutlet UILabel* gogo;
-@property (nonatomic, retain) IBOutlet UILabel* pomodoro;
 @property (nonatomic, retain) IBOutlet UILabel* timerLabel;
 @property (nonatomic, retain) Timer* timer;
 @property (nonatomic, retain) IBOutlet UIButton* button;

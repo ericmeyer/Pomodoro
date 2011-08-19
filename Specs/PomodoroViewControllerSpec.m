@@ -64,7 +64,7 @@ CONTEXT(PomodoroViewController)
                     NSString* title = controller.button.titleLabel.text;
                     [expect(title) toBeEqualTo: @"cancel"];
                 }),
-             it(@"changes the button text to start task when cancelling a pomodoro",
+             it(@"changes the button text to go when cancelling a pomodoro",
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
                     controller.button = [[UIButton alloc] init];
@@ -73,7 +73,7 @@ CONTEXT(PomodoroViewController)
                     [controller cancelPomodoro];
                     
                     NSString* title = controller.button.titleLabel.text;
-                    [expect(title) toBeEqualTo: @"start task"];
+                    [expect(title) toBeEqualTo: @"go"];
                 }),
              it(@"resets the timer label text on cancel",
                 ^{
@@ -160,14 +160,14 @@ CONTEXT(PomodoroViewController)
                     
                     expectFalse([oldTimer.countdown isValid]);
                 }),
-             it(@"changes the button text to start task when a break ends",
+             it(@"changes the button text to go when a break ends",
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
                     controller.button = [[UIButton alloc] init];
                     [controller breakEnded];
                     
                     NSString* title = controller.button.titleLabel.text;
-                    [expect(title) toBeEqualTo: @"start task"];
+                    [expect(title) toBeEqualTo: @"go"];
                 }),
              it(@"changes the button to restart the pomodoro when the break ends",
                 ^{
