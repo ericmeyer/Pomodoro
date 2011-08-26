@@ -12,7 +12,7 @@
 
 @implementation PomodoroViewController
 
-@synthesize timerLabel, timer, button;
+@synthesize timerLabel, timer, goButton, cancelButton, startBreakButton;
 
 -(void) dealloc {
     [super dealloc];
@@ -25,7 +25,9 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     self.timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
-    [self.button.titleLabel setFont: [UIFont fontWithName: @"Comfortaa-Bold" size: 19.56]];
+    [self.goButton.titleLabel setFont: [UIFont fontWithName: @"Comfortaa-Bold" size: 19.56]];
+    [self.cancelButton setHidden: YES];
+    [self.startBreakButton setHidden: YES];
 }
 
 -(void) viewDidUnload {
@@ -38,18 +40,15 @@
 
 -(IBAction) startPomodoro {
     timer = [Timer startWithDuration: POMODORO_DURATION target: self selector: @selector(startSnooze)];
-    [self changeButtonTargetTo: @selector(cancelPomodoro) withText:@"cancel"];
-//    UIImage* image = [UIImage imageNamed: @"cancel_button.png"];
-//    CGRect newFrame = self.button.frame;
-//    newFrame.size = CGSizeMake(200, 50.0);
-//    self.button.frame = newFrame;
-//    [self.button setImage: image forState: UIControlStateNormal];
+    [self.cancelButton setHidden: NO];
+    [self.goButton setHidden: YES];
 }
 
 -(IBAction) cancelPomodoro {
     [timer cancel];
-    [self changeButtonTargetTo: @selector(startPomodoro) withText:@"go"];
     timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
+    [self.goButton setHidden: NO];
+    [self.cancelButton setHidden: YES];
 }
 
 -(void) startSnooze {
@@ -72,9 +71,9 @@
 }
 
 -(void) changeButtonTargetTo: (SEL) selector  withText:(NSString*)text {
-    [self.button removeTarget: self action: NULL forControlEvents: UIControlEventTouchUpInside];
-    [self.button addTarget: self action: selector forControlEvents: UIControlEventTouchUpInside];
-    [self.button setTitle: text forState: UIControlStateNormal];
+    [self.goButton removeTarget: self action: NULL forControlEvents: UIControlEventTouchUpInside];
+    [self.goButton addTarget: self action: selector forControlEvents: UIControlEventTouchUpInside];
+    [self.goButton setTitle: text forState: UIControlStateNormal];
 }
 
 @end

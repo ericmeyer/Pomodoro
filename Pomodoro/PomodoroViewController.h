@@ -17,11 +17,15 @@
 @interface PomodoroViewController : UIViewController<TimerDelegate> {
     UILabel* timerLabel;
     Timer* timer;
-    UIButton* button;
+    UIButton* goButton;
+    UIButton* cancelButton;
+    UIButton* startBreakButton;
 }
 @property (nonatomic, retain) IBOutlet UILabel* timerLabel;
 @property (nonatomic, retain) Timer* timer;
-@property (nonatomic, retain) IBOutlet UIButton* button;
+@property (nonatomic, retain) IBOutlet UIButton* goButton;
+@property (nonatomic, retain) IBOutlet UIButton* cancelButton;
+@property (nonatomic, retain) IBOutlet UIButton* startBreakButton;
 
 -(IBAction) startPomodoro;
 -(IBAction) cancelPomodoro;
