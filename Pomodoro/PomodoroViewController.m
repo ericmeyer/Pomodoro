@@ -30,6 +30,7 @@
     [self.startBreakButton setHidden: YES];
     [self.cancelBreakButton setHidden: YES];
     [self.startBreakButton setHidden: YES];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"black_bg.png"]];
 }
 
 -(void) viewDidUnload {
@@ -55,7 +56,7 @@
     [self.cancelButton setHidden: YES];
     [self.cancelBreakButton setHidden: YES];
     [self.startBreakButton setHidden: YES];
-    self.view.backgroundColor = [[UIColor alloc] initWithRed:39.0/255 green:39.0/255 blue:39.0/255 alpha:1];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"black_bg.png"]];
 }
 
 -(void) startSnooze {
@@ -75,9 +76,8 @@
 }
 
 -(void) breakEnded {
-//    [self changeButtonTargetTo: @selector(startPomodoro) withText:@"go"];
     self.timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
-    self.view.backgroundColor = [[UIColor alloc] initWithRed:39.0/255 green:39.0/255 blue:39.0/255 alpha:1];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"black_bg.png"]];
     [self.goButton setHidden: NO];
     [self.cancelButton setHidden: YES];
     [self.startBreakButton setHidden: YES];
