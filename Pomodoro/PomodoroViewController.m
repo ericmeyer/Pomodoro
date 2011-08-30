@@ -6,13 +6,13 @@
 
 @interface PomodoroViewController ()
 
--(void) changeButtonTargetTo: (SEL) selector withText:(NSString*)text;
+-(void) show: (UIButton*) buttonToShow;
 
 @end
 
 @implementation PomodoroViewController
 
-@synthesize timerLabel, timer, goButton, cancelButton, startBreakButton, cancelBreakButton;
+@synthesize timerLabel, timer, goButton, cancelButton, startBreakButton, cancelBreakButton, buttons;
 
 -(void) dealloc {
     [super dealloc];
@@ -26,10 +26,12 @@
     [super viewDidLoad];
     self.timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
     [self.goButton.titleLabel setFont: [UIFont fontWithName: @"Comfortaa-Bold" size: 19.56]];
-    [self.cancelButton setHidden: YES];
-    [self.startBreakButton setHidden: YES];
-    [self.cancelBreakButton setHidden: YES];
-    [self.startBreakButton setHidden: YES];
+    self.buttons = [NSArray arrayWithObjects: self.startBreakButton,
+                                              self.cancelButton,
+                                              self.cancelBreakButton,
+                                              self.goButton,
+                                              nil];
+    [self show: goButton];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"black_bg.png"]];
 }
 
@@ -43,55 +45,46 @@
 
 -(IBAction) startPomodoro {
     timer = [Timer startWithDuration: POMODORO_DURATION target: self selector: @selector(startSnooze)];
-    [self.cancelButton setHidden: NO];
-    [self.goButton setHidden: YES];
-    [self.cancelBreakButton setHidden: YES];
-    [self.startBreakButton setHidden: YES];
+    [self show: cancelButton];
 }
 
 -(IBAction) cancelPomodoro {
     [timer cancel];
     timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
-    [self.goButton setHidden: NO];
-    [self.cancelButton setHidden: YES];
-    [self.cancelBreakButton setHidden: YES];
-    [self.startBreakButton setHidden: YES];
+    [self show: goButton];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"black_bg.png"]];
 }
 
 -(void) startSnooze {
     timer = [Timer startWithDuration: SNOOZE_DURATION target: self selector: @selector(startSnooze)];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"start_break_bg.png"]];
-    [self.startBreakButton setHidden: NO];
-    [self.cancelButton setHidden: YES];
+    [self show: startBreakButton];
 }
 
 -(IBAction) startBreak {
     [timer cancel];
     timer = [Timer startWithDuration: BREAK_DURATION target: self selector: @selector(breakEnded)];
-    [self.cancelBreakButton setHidden: NO];
-    [self.cancelButton setHidden: YES];
-    [self.startBreakButton setHidden: YES];
-    [self.goButton setHidden: YES];
+    [self show: cancelBreakButton];
 }
 
 -(void) breakEnded {
     self.timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"black_bg.png"]];
-    [self.goButton setHidden: NO];
-    [self.cancelButton setHidden: YES];
-    [self.startBreakButton setHidden: YES];
-    [self.cancelBreakButton setHidden: YES];
+    [self show: goButton];
 }
 
 -(void) remainingTimeDidChange:(NSNumber*)remainingSeconds {
     self.timerLabel.text = [RemainingTime stringFormatForDuration: [remainingSeconds intValue]];
 }
 
--(void) changeButtonTargetTo: (SEL) selector  withText:(NSString*)text {
-    [self.goButton removeTarget: self action: NULL forControlEvents: UIControlEventTouchUpInside];
-    [self.goButton addTarget: self action: selector forControlEvents: UIControlEventTouchUpInside];
-    [self.goButton setTitle: text forState: UIControlStateNormal];
+-(void) show: (UIButton*) buttonToShow {
+    for (UIButton* button in self.buttons) {
+        if (button == buttonToShow) {
+            [button setHidden: NO];
+        } else {
+            [button setHidden: YES];
+        }
+    }
 }
 
 @end

@@ -152,26 +152,5 @@ CONTEXT(PomodoroViewController)
                     
                     expectFalse([oldTimer.countdown isValid]);
                 }),
-             it(@"changes the button text to go when a break ends",
-                ^{
-                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
-                    controller.goButton = [[UIButton alloc] init];
-                    [controller breakEnded];
-                    
-                    NSString* title = controller.goButton.titleLabel.text;
-//                    [expect(title) toBeEqualTo: @"go"];
-                }),
-             it(@"changes the button to restart the pomodoro when the break ends",
-                ^{
-                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
-                    controller.goButton = [[UIButton alloc] init];
-                    
-                    [controller startBreak];
-                    [controller breakEnded];
-                    
-                    NSArray* actions = [controller.goButton actionsForTarget: controller forControlEvent: UIControlEventTouchUpInside];
-//                    [expect([NSNumber numberWithInt: [actions count]]) toBeEqualTo: [NSNumber numberWithInt: 1]];
-//                    [expect([actions objectAtIndex: 0]) toBeEqualTo: @"startPomodoro"];
-                }),
              nil);
 }

@@ -21,6 +21,7 @@
     UIButton* cancelButton;
     UIButton* startBreakButton;
     UIButton* cancelBreakButton;
+    NSArray* buttons;
 }
 @property (nonatomic, retain) IBOutlet UILabel* timerLabel;
 @property (nonatomic, retain) Timer* timer;
@@ -28,12 +29,12 @@
 @property (nonatomic, retain) IBOutlet UIButton* cancelButton;
 @property (nonatomic, retain) IBOutlet UIButton* startBreakButton;
 @property (nonatomic, retain) IBOutlet UIButton* cancelBreakButton;
+@property (nonatomic, retain) NSArray* buttons;
 
 -(IBAction) startPomodoro;
 -(IBAction) cancelPomodoro;
 -(void) startSnooze;
 -(void) startBreak;
-
 -(void) breakEnded;
 
 @end
