@@ -76,16 +76,6 @@
 		F8EABB7813D0DC6400C98585 /* Comfortaa_Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8EABB7213D0DC6400C98585 /* Comfortaa_Thin.ttf */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F8ABE91513DA13F600608F8E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F89E691E13902DF200B24D7D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F89E695F13902EDE00B24D7D;
-			remoteInfo = UnitTests;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		F8014D7113FEED24008623D0 /* cancel_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel_button.png; sourceTree = "<group>"; };
 		F8014D7513FEF02B008623D0 /* cancel_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel_button@2x.png"; sourceTree = "<group>"; };
@@ -333,7 +323,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F8ABE91613DA13F600608F8E /* PBXTargetDependency */,
 			);
 			name = Pomodoro;
 			productName = Pomodoro;
@@ -496,14 +485,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		F8ABE91613DA13F600608F8E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F89E695F13902EDE00B24D7D /* UnitTests */;
-			targetProxy = F8ABE91513DA13F600608F8E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		F89E693413902DF200B24D7D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -568,12 +549,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pomodoro/Pomodoro-Prefix.pch";
 				INFOPLIST_FILE = "Pomodoro/Pomodoro-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -582,11 +565,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pomodoro/Pomodoro-Prefix.pch";
 				INFOPLIST_FILE = "Pomodoro/Pomodoro-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

@@ -12,7 +12,7 @@
     timer.target = target;
     timer.selector = selector;
     [target remainingTimeDidChange: [NSNumber numberWithInt: duration]];
-    timer.countdown = [NSTimer scheduledTimerWithTimeInterval: 0.25 target: timer selector: @selector(checkRemainingTime) userInfo: nil repeats: YES];
+    timer.countdown = [NSTimer scheduledTimerWithTimeInterval: 0.1 target: timer selector: @selector(checkRemainingTime) userInfo: nil repeats: YES];
     return timer;
 }
 -(void) pause {
