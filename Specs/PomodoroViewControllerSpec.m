@@ -1,6 +1,7 @@
 #import "OCDSpec/OCDSpec.h"
 #import "PomodoroViewController.h"
 #import "RemainingTime.h"
+#import "OCMock.h"
 
 void loadButtonsFor(PomodoroViewController *controller) 
 {
@@ -21,6 +22,12 @@ CONTEXT(PomodoroViewController)
                     
                     NSString* formattedDuration = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
                     [expect(controller.timerLabel.text) toBeEqualTo: formattedDuration];
+                }),
+             it(@"initalizes the alert view",
+                ^{
+                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    [controller viewDidLoad];
+                    [expect(controller.alert.title) toBeEqualTo: @"It's time to start your break"];
                 }),
              it(@"updates the label text",
                 ^{
@@ -105,6 +112,32 @@ CONTEXT(PomodoroViewController)
                     [expect(controller.timer.target) toBeEqualTo: controller];
                     [expect(NSStringFromSelector(controller.timer.selector)) toBeEqualTo: NSStringFromSelector(@selector(startSnooze))];
                 }),
+             it(@"shows the view on start snooze if it's not visible",
+                ^{
+                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    [controller viewDidLoad];
+                    OCMockObject *alertMock = [OCMockObject partialMockForObject: controller.alert];
+                    
+//                    [[[alertMock stub] andReturnValue: NO] isVisible];
+                    [[alertMock expect] show];
+                    
+                    [controller startSnooze];
+                    
+                    [alertMock verify];
+                }),
+//             it(@"does not show the view on start snooze if is not visible",
+//                ^{
+//                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+//                    [controller viewDidLoad];
+//                    OCMockObject *alertMock = [OCMockObject partialMockForObject: controller.alert];
+//                    
+//                    [[[alertMock stub] andReturn: YES] isVisible];
+//                    [[alertMock reject] alert];
+//                    
+//                    [controller startSnooze];
+//                    
+//                    [alertMock verify];
+//                }),
              it(@"shows only the start break button when starting a snooze",
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];

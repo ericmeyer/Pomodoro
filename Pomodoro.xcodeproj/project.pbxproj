@@ -33,6 +33,10 @@
 		F828859413D9F7D200834BA3 /* Podkova-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F828859213D9F7D200834BA3 /* Podkova-Regular.ttf */; };
 		F8405ADD13CDD43B003B14BD /* MockTimerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8405ADC13CDD43B003B14BD /* MockTimerDelegate.m */; };
 		F84D418313C7973600161BBF /* unitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = F84D418113C7973100161BBF /* unitTestMain.m */; };
+		F871A7E21411697F0027A0D6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F871A7E11411697F0027A0D6 /* AudioToolbox.framework */; };
+		F871A7EC14116C1C0027A0D6 /* tap.aif in Resources */ = {isa = PBXBuildFile; fileRef = F871A7EB14116C1C0027A0D6 /* tap.aif */; };
+		F871A7ED14116C1C0027A0D6 /* tap.aif in Resources */ = {isa = PBXBuildFile; fileRef = F871A7EB14116C1C0027A0D6 /* tap.aif */; };
+		F871A8761411772E0027A0D6 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F871A8751411772E0027A0D6 /* libOCMock.a */; };
 		F88530E013CC85BD0026B42B /* TimerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530DF13CC85BD0026B42B /* TimerSpec.m */; };
 		F88530E313CC86630026B42B /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530E213CC86630026B42B /* Timer.m */; };
 		F88530E613CC89E30026B42B /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530E213CC86630026B42B /* Timer.m */; };
@@ -93,6 +97,17 @@
 		F8405ADC13CDD43B003B14BD /* MockTimerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockTimerDelegate.m; sourceTree = SOURCE_ROOT; };
 		F8405ADF13CDD45F003B14BD /* TimerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerDelegate.h; sourceTree = "<group>"; };
 		F84D418113C7973100161BBF /* unitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = unitTestMain.m; path = Programs/unitTestMain.m; sourceTree = "<group>"; };
+		F871A7DE141165CF0027A0D6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F871A7E11411697F0027A0D6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F871A7EB14116C1C0027A0D6 /* tap.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap.aif; sourceTree = "<group>"; };
+		F871A8751411772E0027A0D6 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		F871A8771411776D0027A0D6 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
+		F871A87D141178D00027A0D6 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		F871A87E141178D00027A0D6 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		F871A87F141178D00027A0D6 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		F871A880141178D00027A0D6 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		F871A881141178D00027A0D6 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		F871A882141178D00027A0D6 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		F88530DF13CC85BD0026B42B /* TimerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerSpec.m; path = Specs/TimerSpec.m; sourceTree = SOURCE_ROOT; };
 		F88530E113CC86630026B42B /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		F88530E213CC86630026B42B /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
@@ -152,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F871A7E21411697F0027A0D6 /* AudioToolbox.framework in Frameworks */,
 				F89E692C13902DF200B24D7D /* UIKit.framework in Frameworks */,
 				F89E692E13902DF200B24D7D /* Foundation.framework in Frameworks */,
 				F89E693013902DF200B24D7D /* CoreGraphics.framework in Frameworks */,
@@ -164,15 +180,49 @@
 			files = (
 				F89E69D51390337200B24D7D /* UIKit.framework in Frameworks */,
 				F89E696313902EDE00B24D7D /* Foundation.framework in Frameworks */,
+				F871A8761411772E0027A0D6 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F871A874141176B90027A0D6 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				F871A87B141178D00027A0D6 /* Headers */,
+				F871A8751411772E0027A0D6 /* libOCMock.a */,
+			);
+			name = OCMock;
+			sourceTree = "<group>";
+		};
+		F871A87B141178D00027A0D6 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F871A87C141178D00027A0D6 /* OCMock */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		F871A87C141178D00027A0D6 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				F871A87D141178D00027A0D6 /* NSNotificationCenter+OCMAdditions.h */,
+				F871A87E141178D00027A0D6 /* OCMArg.h */,
+				F871A87F141178D00027A0D6 /* OCMConstraint.h */,
+				F871A880141178D00027A0D6 /* OCMock.h */,
+				F871A881141178D00027A0D6 /* OCMockObject.h */,
+				F871A882141178D00027A0D6 /* OCMockRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
 		F89E691C13902DF200B24D7D = {
 			isa = PBXGroup;
 			children = (
+				F871A874141176B90027A0D6 /* OCMock */,
+				F871A7E11411697F0027A0D6 /* AudioToolbox.framework */,
+				F871A7DE141165CF0027A0D6 /* AVFoundation.framework */,
 				F89E69D41390337200B24D7D /* UIKit.framework */,
 				F89E698213902F9B00B24D7D /* OCDSpec */,
 				F89E693113902DF200B24D7D /* Pomodoro */,
@@ -194,6 +244,7 @@
 		F89E692A13902DF200B24D7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F871A8771411776D0027A0D6 /* OCMock.framework */,
 				F89E692B13902DF200B24D7D /* UIKit.framework */,
 				F89E692D13902DF200B24D7D /* Foundation.framework */,
 				F89E692F13902DF200B24D7D /* CoreGraphics.framework */,
@@ -224,6 +275,7 @@
 		F89E693213902DF200B24D7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F871A7EB14116C1C0027A0D6 /* tap.aif */,
 				F8A420091408603800A9B41A /* black_bg.png */,
 				F8A4200A1408603800A9B41A /* black_bg@2x.png */,
 				F80F4D8C14084AD000694C4A /* cancel_button_orange.png */,
@@ -400,6 +452,7 @@
 				F80F4D9014084AD000694C4A /* cancel_button_orange@2x.png in Resources */,
 				F8A4200B1408603800A9B41A /* black_bg.png in Resources */,
 				F8A4200D1408603800A9B41A /* black_bg@2x.png in Resources */,
+				F871A7EC14116C1C0027A0D6 /* tap.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +478,7 @@
 				F80F4D9114084AD000694C4A /* cancel_button_orange@2x.png in Resources */,
 				F8A4200C1408603800A9B41A /* black_bg.png in Resources */,
 				F8A4200E1408603800A9B41A /* black_bg@2x.png in Resources */,
+				F871A7ED14116C1C0027A0D6 /* tap.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,11 +637,27 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/OCDSpec\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SOURCE_ROOT)/OCDSpec\"",
+					"\"$(SOURCE_ROOT)/Headers/OCMock\"",
+				);
 				INFOPLIST_FILE = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-force_load",
+					"\"$(SRCROOT)/libOCMock.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -600,10 +670,26 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/OCDSpec\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SOURCE_ROOT)/OCDSpec\"",
+					"\"$(SOURCE_ROOT)/Headers/OCMock\"",
+				);
 				INFOPLIST_FILE = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-force_load",
+					"\"$(SRCROOT)/libOCMock.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
