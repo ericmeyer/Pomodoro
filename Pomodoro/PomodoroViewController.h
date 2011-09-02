@@ -1,12 +1,12 @@
 #import <UIKit/UIKit.h>
 #import "TimerDelegate.h"
 #import "Timer.h"
-//#import <AudioToolbox/AudioToolbox.h>
+#import "AlertProtocol.h"
 
-#define TESTING_TIMING 0
+#define TESTING_TIMING 1
 
 #if TESTING_TIMING
-    #define POMODORO_DURATION 10
+    #define POMODORO_DURATION 3
     #define SNOOZE_DURATION 3
     #define BREAK_DURATION 6
 #else
@@ -22,10 +22,8 @@
     UIButton* cancelButton;
     UIButton* startBreakButton;
     UIButton* cancelBreakButton;
-    UIAlertView* alert;
+    NSObject<AlertProtocol>* soundAlert;
     NSArray* buttons;
-//    CFURLRef		soundFileURLRef;
-//	SystemSoundID	soundFileObject;
 }
 @property (nonatomic, retain) IBOutlet UILabel* timerLabel;
 @property (nonatomic, retain) Timer* timer;
@@ -33,11 +31,9 @@
 @property (nonatomic, retain) IBOutlet UIButton* cancelButton;
 @property (nonatomic, retain) IBOutlet UIButton* startBreakButton;
 @property (nonatomic, retain) IBOutlet UIButton* cancelBreakButton;
-@property (nonatomic, retain) UIAlertView* alert;
 @property (nonatomic, retain) NSArray* buttons;
 
-//@property (readwrite)	CFURLRef		soundFileURLRef;
-//@property (readonly)	SystemSoundID	soundFileObject;
+@property (nonatomic, retain) NSObject<AlertProtocol>* soundAlert;
 
 -(IBAction) startPomodoro;
 -(IBAction) cancelPomodoro;

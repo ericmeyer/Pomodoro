@@ -2,6 +2,8 @@
 #import "PomodoroViewController.h"
 #import "RemainingTime.h"
 #import "OCMock.h"
+#import "Alert.h"
+#import "MockAlert.h"
 
 void loadButtonsFor(PomodoroViewController *controller) 
 {
@@ -23,11 +25,11 @@ CONTEXT(PomodoroViewController)
                     NSString* formattedDuration = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
                     [expect(controller.timerLabel.text) toBeEqualTo: formattedDuration];
                 }),
-             it(@"initalizes the alert view",
+             it(@"initalizes the alert",
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
                     [controller viewDidLoad];
-                    [expect(controller.alert.title) toBeEqualTo: @"It's time to start your break"];
+                    [expect([controller.soundAlert class]) toBeEqualTo: [Alert class]];
                 }),
              it(@"updates the label text",
                 ^{
@@ -40,6 +42,7 @@ CONTEXT(PomodoroViewController)
              it(@"starts a pomodoro",
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+
                     [controller startPomodoro];
                     
                     [expect(controller.timer.duration) toBeEqualTo: [NSNumber numberWithInt: POMODORO_DURATION]];
@@ -106,25 +109,27 @@ CONTEXT(PomodoroViewController)
              it(@"starts a snooze",
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    [controller viewDidLoad];
+                    controller.soundAlert = [[MockAlert alloc] init];
                     [controller startSnooze];
                     
                     [expect(controller.timer.duration) toBeEqualTo: [NSNumber numberWithInt: SNOOZE_DURATION]];
                     [expect(controller.timer.target) toBeEqualTo: controller];
                     [expect(NSStringFromSelector(controller.timer.selector)) toBeEqualTo: NSStringFromSelector(@selector(startSnooze))];
                 }),
-             it(@"shows the view on start snooze if it's not visible",
-                ^{
-                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
-                    [controller viewDidLoad];
-                    OCMockObject *alertMock = [OCMockObject partialMockForObject: controller.alert];
-                    
-//                    [[[alertMock stub] andReturnValue: NO] isVisible];
-                    [[alertMock expect] show];
-                    
-                    [controller startSnooze];
-                    
-                    [alertMock verify];
-                }),
+//             it(@"shows the view on start snooze if it's not visible",
+//                ^{
+//                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+//                    [controller viewDidLoad];
+//                    OCMockObject *alertMock = [OCMockObject partialMockForObject: controller.alert];
+//                    
+////                    [[[alertMock stub] andReturnValue: NO] isVisible];
+//                    [[alertMock expect] show];
+//                    
+//                    [controller startSnooze];
+//                    
+//                    [alertMock verify];
+//                }),
 //             it(@"does not show the view on start snooze if is not visible",
 //                ^{
 //                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
@@ -142,8 +147,9 @@ CONTEXT(PomodoroViewController)
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
                     loadButtonsFor(controller);
-                    
+
                     [controller viewDidLoad];
+                    controller.soundAlert = [[MockAlert alloc] init];
                     [controller startPomodoro];
                     [controller startSnooze];
                     
@@ -178,6 +184,8 @@ CONTEXT(PomodoroViewController)
              it(@"cancels the old timer before starting the break on start break",
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    [controller viewDidLoad];
+                    controller.soundAlert = [[MockAlert alloc] init];
                     [controller startSnooze];
                     Timer* oldTimer = controller.timer;
 

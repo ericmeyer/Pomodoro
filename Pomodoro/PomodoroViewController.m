@@ -3,7 +3,7 @@
 #import "Timer.h"
 
 #import <QuartzCore/QuartzCore.h>
-//#import <AudioToolbox/AudioToolbox.h>
+#import "Alert.h"
 
 @interface PomodoroViewController ()
 
@@ -13,8 +13,7 @@
 
 @implementation PomodoroViewController
 
-@synthesize timerLabel, timer, goButton, cancelButton, startBreakButton, cancelBreakButton, buttons, alert;
-//, alert, soundFileURLRef, soundFileObject;
+@synthesize timerLabel, timer, goButton, cancelButton, startBreakButton, cancelBreakButton, buttons, soundAlert;
 
 -(void) dealloc {
     [super dealloc];
@@ -26,7 +25,7 @@
  
 -(void) viewDidLoad {
     [super viewDidLoad];
-    alert = [[UIAlertView alloc] initWithTitle:@"It's time to start your break" message:nil delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+    soundAlert = [[Alert alloc] init];
     self.timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
     [self.goButton.titleLabel setFont: [UIFont fontWithName: @"Comfortaa-Bold" size: 19.56]];
     self.buttons = [NSArray arrayWithObjects: self.startBreakButton,
@@ -61,23 +60,8 @@
 -(void) startSnooze {
     timer = [Timer startWithDuration: SNOOZE_DURATION target: self selector: @selector(startSnooze)];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"start_break_bg.png"]];
-//    NSURL *tapSound   = [[NSBundle mainBundle] URLForResource: @"tap"
-//                                                withExtension: @"aif"];
-//    
-//    // Store the URL as a CFURLRef instance
-//    self.soundFileURLRef = (CFURLRef) [tapSound retain];
-//    
-//    // Create a system sound object representing the sound file.
-//    AudioServicesCreateSystemSoundID (
-//                                      
-//                                      soundFileURLRef,
-//                                      &soundFileObject
-//                                      );
-//    AudioServicesPlayAlertSound (soundFileObject);
-//
-    if (![alert isVisible]) {
-        [alert show];
-    }
+    NSLog(@"alert: %@", soundAlert);
+    [soundAlert trigger];
     [self show: startBreakButton];
 }
 

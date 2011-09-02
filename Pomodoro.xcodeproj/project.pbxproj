@@ -37,6 +37,12 @@
 		F871A7EC14116C1C0027A0D6 /* tap.aif in Resources */ = {isa = PBXBuildFile; fileRef = F871A7EB14116C1C0027A0D6 /* tap.aif */; };
 		F871A7ED14116C1C0027A0D6 /* tap.aif in Resources */ = {isa = PBXBuildFile; fileRef = F871A7EB14116C1C0027A0D6 /* tap.aif */; };
 		F871A8761411772E0027A0D6 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F871A8751411772E0027A0D6 /* libOCMock.a */; };
+		F871A884141184900027A0D6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F871A883141184900027A0D6 /* AudioToolbox.framework */; };
+		F871A8871411850E0027A0D6 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = F871A8861411850E0027A0D6 /* Alert.m */; };
+		F871A8881411850E0027A0D6 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = F871A8861411850E0027A0D6 /* Alert.m */; };
+		F871A88A14118AED0027A0D6 /* gogo114.png in Resources */ = {isa = PBXBuildFile; fileRef = F871A88914118AED0027A0D6 /* gogo114.png */; };
+		F871A88B14118AED0027A0D6 /* gogo114.png in Resources */ = {isa = PBXBuildFile; fileRef = F871A88914118AED0027A0D6 /* gogo114.png */; };
+		F871A88F141193A90027A0D6 /* MockAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F871A88E141193A90027A0D6 /* MockAlert.m */; };
 		F88530E013CC85BD0026B42B /* TimerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530DF13CC85BD0026B42B /* TimerSpec.m */; };
 		F88530E313CC86630026B42B /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530E213CC86630026B42B /* Timer.m */; };
 		F88530E613CC89E30026B42B /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530E213CC86630026B42B /* Timer.m */; };
@@ -108,10 +114,17 @@
 		F871A880141178D00027A0D6 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
 		F871A881141178D00027A0D6 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
 		F871A882141178D00027A0D6 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		F871A883141184900027A0D6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F871A8851411850E0027A0D6 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
+		F871A8861411850E0027A0D6 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
+		F871A88914118AED0027A0D6 /* gogo114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gogo114.png; sourceTree = "<group>"; };
+		F871A88C141193520027A0D6 /* AlertProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertProtocol.h; sourceTree = "<group>"; };
+		F871A88D141193A90027A0D6 /* MockAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockAlert.h; sourceTree = SOURCE_ROOT; };
+		F871A88E141193A90027A0D6 /* MockAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockAlert.m; sourceTree = SOURCE_ROOT; };
 		F88530DF13CC85BD0026B42B /* TimerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerSpec.m; path = Specs/TimerSpec.m; sourceTree = SOURCE_ROOT; };
 		F88530E113CC86630026B42B /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		F88530E213CC86630026B42B /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
-		F89E692713902DF200B24D7D /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F89E692713902DF200B24D7D /* go pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "go pomodoro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89E692B13902DF200B24D7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F89E692D13902DF200B24D7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F89E692F13902DF200B24D7D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -178,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F871A884141184900027A0D6 /* AudioToolbox.framework in Frameworks */,
 				F89E69D51390337200B24D7D /* UIKit.framework in Frameworks */,
 				F89E696313902EDE00B24D7D /* Foundation.framework in Frameworks */,
 				F871A8761411772E0027A0D6 /* libOCMock.a in Frameworks */,
@@ -220,6 +234,8 @@
 		F89E691C13902DF200B24D7D = {
 			isa = PBXGroup;
 			children = (
+				F871A88914118AED0027A0D6 /* gogo114.png */,
+				F871A883141184900027A0D6 /* AudioToolbox.framework */,
 				F871A874141176B90027A0D6 /* OCMock */,
 				F871A7E11411697F0027A0D6 /* AudioToolbox.framework */,
 				F871A7DE141165CF0027A0D6 /* AVFoundation.framework */,
@@ -235,7 +251,7 @@
 		F89E692813902DF200B24D7D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F89E692713902DF200B24D7D /* Pomodoro.app */,
+				F89E692713902DF200B24D7D /* go pomodoro.app */,
 				F89E696013902EDE00B24D7D /* UnitTests.app */,
 			);
 			name = Products;
@@ -268,6 +284,9 @@
 				F88530E113CC86630026B42B /* Timer.h */,
 				F88530E213CC86630026B42B /* Timer.m */,
 				F8405ADF13CDD45F003B14BD /* TimerDelegate.h */,
+				F871A8851411850E0027A0D6 /* Alert.h */,
+				F871A8861411850E0027A0D6 /* Alert.m */,
+				F871A88C141193520027A0D6 /* AlertProtocol.h */,
 			);
 			path = Pomodoro;
 			sourceTree = "<group>";
@@ -357,6 +376,8 @@
 				F8C60E7513C78F73008EDC3B /* MockRemainingTime.m */,
 				F8405ADB13CDD43B003B14BD /* MockTimerDelegate.h */,
 				F8405ADC13CDD43B003B14BD /* MockTimerDelegate.m */,
+				F871A88D141193A90027A0D6 /* MockAlert.h */,
+				F871A88E141193A90027A0D6 /* MockAlert.m */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -364,9 +385,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F89E692613902DF200B24D7D /* Pomodoro */ = {
+		F89E692613902DF200B24D7D /* go pomodoro */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F89E694813902DF200B24D7D /* Build configuration list for PBXNativeTarget "Pomodoro" */;
+			buildConfigurationList = F89E694813902DF200B24D7D /* Build configuration list for PBXNativeTarget "go pomodoro" */;
 			buildPhases = (
 				F89E692313902DF200B24D7D /* Sources */,
 				F89E692413902DF200B24D7D /* Frameworks */,
@@ -376,9 +397,9 @@
 			);
 			dependencies = (
 			);
-			name = Pomodoro;
+			name = "go pomodoro";
 			productName = Pomodoro;
-			productReference = F89E692713902DF200B24D7D /* Pomodoro.app */;
+			productReference = F89E692713902DF200B24D7D /* go pomodoro.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F89E695F13902EDE00B24D7D /* UnitTests */ = {
@@ -419,7 +440,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F89E692613902DF200B24D7D /* Pomodoro */,
+				F89E692613902DF200B24D7D /* go pomodoro */,
 				F89E695F13902EDE00B24D7D /* UnitTests */,
 			);
 		};
@@ -453,6 +474,7 @@
 				F8A4200B1408603800A9B41A /* black_bg.png in Resources */,
 				F8A4200D1408603800A9B41A /* black_bg@2x.png in Resources */,
 				F871A7EC14116C1C0027A0D6 /* tap.aif in Resources */,
+				F871A88A14118AED0027A0D6 /* gogo114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +501,7 @@
 				F8A4200C1408603800A9B41A /* black_bg.png in Resources */,
 				F8A4200E1408603800A9B41A /* black_bg@2x.png in Resources */,
 				F871A7ED14116C1C0027A0D6 /* tap.aif in Resources */,
+				F871A88B14118AED0027A0D6 /* gogo114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +533,7 @@
 				F89E694213902DF200B24D7D /* PomodoroViewController.m in Sources */,
 				F89E69DF13903CE100B24D7D /* RemainingTime.m in Sources */,
 				F88530E313CC86630026B42B /* Timer.m in Sources */,
+				F871A8871411850E0027A0D6 /* Alert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +558,8 @@
 				F84D418313C7973600161BBF /* unitTestMain.m in Sources */,
 				F88530E013CC85BD0026B42B /* TimerSpec.m in Sources */,
 				F8405ADD13CDD43B003B14BD /* MockTimerDelegate.m in Sources */,
+				F871A8881411850E0027A0D6 /* Alert.m in Sources */,
+				F871A88F141193A90027A0D6 /* MockAlert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,7 +735,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F89E694813902DF200B24D7D /* Build configuration list for PBXNativeTarget "Pomodoro" */ = {
+		F89E694813902DF200B24D7D /* Build configuration list for PBXNativeTarget "go pomodoro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F89E694913902DF200B24D7D /* Debug */,
