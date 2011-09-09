@@ -27,7 +27,6 @@
     [super viewDidLoad];
     alert = [[Alert alloc] init];
     self.timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
-    [self.goButton.titleLabel setFont: [UIFont fontWithName: @"Comfortaa-Bold" size: 19.56]];
     self.buttons = [NSArray arrayWithObjects: self.startBreakButton,
                                               self.cancelButton,
                                               self.cancelBreakButton,

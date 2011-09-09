@@ -5,6 +5,7 @@
 
 #define TESTING_TIMING 0
 
+
 #if TESTING_TIMING
     #define POMODORO_DURATION 3
     #define SNOOZE_DURATION 3
