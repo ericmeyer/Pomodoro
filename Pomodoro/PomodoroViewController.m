@@ -59,7 +59,6 @@
 -(void) startSnooze {
     timer = [Timer startWithDuration: SNOOZE_DURATION target: self selector: @selector(startSnooze)];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"start_break_bg.png"]];
-    NSLog(@"alert: %@", alert);
     [alert trigger];
     [self show: startBreakButton];
 }

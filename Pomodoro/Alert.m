@@ -7,7 +7,7 @@
 -(id) init {
     if ((self = [super init])) {
         NSURL *tapSound   = [[NSBundle mainBundle] URLForResource: @"slime_splash"
-                                                    withExtension: @"mp3"];
+                                                    withExtension: @"aif"];
         self.soundFileURLRef = (CFURLRef) [tapSound retain];
         AudioServicesCreateSystemSoundID (
                                           

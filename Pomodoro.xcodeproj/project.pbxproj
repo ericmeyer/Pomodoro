@@ -41,8 +41,8 @@
 		F871A88A14118AED0027A0D6 /* gogo114.png in Resources */ = {isa = PBXBuildFile; fileRef = F871A88914118AED0027A0D6 /* gogo114.png */; };
 		F871A88B14118AED0027A0D6 /* gogo114.png in Resources */ = {isa = PBXBuildFile; fileRef = F871A88914118AED0027A0D6 /* gogo114.png */; };
 		F871A88F141193A90027A0D6 /* MockAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F871A88E141193A90027A0D6 /* MockAlert.m */; };
-		F87449DD141A9CCF0040CC9B /* slime_splash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F87449DC141A9CCF0040CC9B /* slime_splash.mp3 */; };
-		F87449DE141A9CCF0040CC9B /* slime_splash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F87449DC141A9CCF0040CC9B /* slime_splash.mp3 */; };
+		F87449E1141AA4200040CC9B /* slime_splash.aif in Resources */ = {isa = PBXBuildFile; fileRef = F87449E0141AA4200040CC9B /* slime_splash.aif */; };
+		F87449E2141AA4200040CC9B /* slime_splash.aif in Resources */ = {isa = PBXBuildFile; fileRef = F87449E0141AA4200040CC9B /* slime_splash.aif */; };
 		F88530E013CC85BD0026B42B /* TimerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530DF13CC85BD0026B42B /* TimerSpec.m */; };
 		F88530E313CC86630026B42B /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530E213CC86630026B42B /* Timer.m */; };
 		F88530E613CC89E30026B42B /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530E213CC86630026B42B /* Timer.m */; };
@@ -120,7 +120,7 @@
 		F871A88C141193520027A0D6 /* AlertProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertProtocol.h; sourceTree = "<group>"; };
 		F871A88D141193A90027A0D6 /* MockAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockAlert.h; sourceTree = SOURCE_ROOT; };
 		F871A88E141193A90027A0D6 /* MockAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockAlert.m; sourceTree = SOURCE_ROOT; };
-		F87449DC141A9CCF0040CC9B /* slime_splash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slime_splash.mp3; sourceTree = "<group>"; };
+		F87449E0141AA4200040CC9B /* slime_splash.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = slime_splash.aif; sourceTree = "<group>"; };
 		F88530DF13CC85BD0026B42B /* TimerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerSpec.m; path = Specs/TimerSpec.m; sourceTree = SOURCE_ROOT; };
 		F88530E113CC86630026B42B /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		F88530E213CC86630026B42B /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 		F89E693213902DF200B24D7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F87449DC141A9CCF0040CC9B /* slime_splash.mp3 */,
+				F87449E0141AA4200040CC9B /* slime_splash.aif */,
 				F8A420091408603800A9B41A /* black_bg.png */,
 				F8A4200A1408603800A9B41A /* black_bg@2x.png */,
 				F80F4D8C14084AD000694C4A /* cancel_button_orange.png */,
@@ -474,7 +474,7 @@
 				F8A4200B1408603800A9B41A /* black_bg.png in Resources */,
 				F8A4200D1408603800A9B41A /* black_bg@2x.png in Resources */,
 				F871A88A14118AED0027A0D6 /* gogo114.png in Resources */,
-				F87449DD141A9CCF0040CC9B /* slime_splash.mp3 in Resources */,
+				F87449E1141AA4200040CC9B /* slime_splash.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +501,7 @@
 				F8A4200C1408603800A9B41A /* black_bg.png in Resources */,
 				F8A4200E1408603800A9B41A /* black_bg@2x.png in Resources */,
 				F871A88B14118AED0027A0D6 /* gogo114.png in Resources */,
-				F87449DE141A9CCF0040CC9B /* slime_splash.mp3 in Resources */,
+				F87449E2141AA4200040CC9B /* slime_splash.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

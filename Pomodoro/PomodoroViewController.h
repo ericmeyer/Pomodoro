@@ -3,7 +3,7 @@
 #import "Timer.h"
 #import "AlertProtocol.h"
 
-#define TESTING_TIMING 0
+#define TESTING_TIMING 1
 
 
 #if TESTING_TIMING
