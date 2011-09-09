@@ -6,8 +6,8 @@
 
 -(id) init {
     if ((self = [super init])) {
-        NSURL *tapSound   = [[NSBundle mainBundle] URLForResource: @"tap"
-                                                    withExtension: @"aif"];
+        NSURL *tapSound   = [[NSBundle mainBundle] URLForResource: @"slime_splash"
+                                                    withExtension: @"mp3"];
         self.soundFileURLRef = (CFURLRef) [tapSound retain];
         AudioServicesCreateSystemSoundID (
                                           
@@ -21,7 +21,15 @@
 }
 
 -(void) trigger {
-    AudioServicesPlayAlertSound (soundFileObject);
+    [self triggerSound];
+    [self triggerDialog];
+}
+
+-(void) triggerSound {
+    AudioServicesPlayAlertSound (soundFileObject);    
+}
+
+-(void) triggerDialog {
     if (![alertDialog isVisible]) {
         [alertDialog show];
     }

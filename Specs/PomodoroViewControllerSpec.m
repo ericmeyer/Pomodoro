@@ -29,7 +29,7 @@ CONTEXT(PomodoroViewController)
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
                     [controller viewDidLoad];
-                    [expect([controller.soundAlert class]) toBeEqualTo: [Alert class]];
+                    [expect([controller.alert class]) toBeEqualTo: [Alert class]];
                 }),
              it(@"updates the label text",
                 ^{
@@ -110,7 +110,7 @@ CONTEXT(PomodoroViewController)
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
                     [controller viewDidLoad];
-                    controller.soundAlert = [[MockAlert alloc] init];
+                    controller.alert = [[MockAlert alloc] init];
                     [controller startSnooze];
                     
                     [expect(controller.timer.duration) toBeEqualTo: [NSNumber numberWithInt: SNOOZE_DURATION]];
@@ -149,7 +149,7 @@ CONTEXT(PomodoroViewController)
                     loadButtonsFor(controller);
 
                     [controller viewDidLoad];
-                    controller.soundAlert = [[MockAlert alloc] init];
+                    controller.alert = [[MockAlert alloc] init];
                     [controller startPomodoro];
                     [controller startSnooze];
                     
@@ -185,7 +185,7 @@ CONTEXT(PomodoroViewController)
                 ^{
                     PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
                     [controller viewDidLoad];
-                    controller.soundAlert = [[MockAlert alloc] init];
+                    controller.alert = [[MockAlert alloc] init];
                     [controller startSnooze];
                     Timer* oldTimer = controller.timer;
 

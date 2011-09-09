@@ -3,7 +3,7 @@
 #import "Timer.h"
 #import "AlertProtocol.h"
 
-#define TESTING_TIMING 1
+#define TESTING_TIMING 0
 
 #if TESTING_TIMING
     #define POMODORO_DURATION 3
@@ -22,7 +22,7 @@
     UIButton* cancelButton;
     UIButton* startBreakButton;
     UIButton* cancelBreakButton;
-    NSObject<AlertProtocol>* soundAlert;
+    NSObject<AlertProtocol>* alert;
     NSArray* buttons;
 }
 @property (nonatomic, retain) IBOutlet UILabel* timerLabel;
@@ -33,7 +33,7 @@
 @property (nonatomic, retain) IBOutlet UIButton* cancelBreakButton;
 @property (nonatomic, retain) NSArray* buttons;
 
-@property (nonatomic, retain) NSObject<AlertProtocol>* soundAlert;
+@property (nonatomic, retain) NSObject<AlertProtocol>* alert;
 
 -(IBAction) startPomodoro;
 -(IBAction) cancelPomodoro;

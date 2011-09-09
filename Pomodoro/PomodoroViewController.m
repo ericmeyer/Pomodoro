@@ -13,7 +13,7 @@
 
 @implementation PomodoroViewController
 
-@synthesize timerLabel, timer, goButton, cancelButton, startBreakButton, cancelBreakButton, buttons, soundAlert;
+@synthesize timerLabel, timer, goButton, cancelButton, startBreakButton, cancelBreakButton, buttons, alert;
 
 -(void) dealloc {
     [super dealloc];
@@ -25,7 +25,7 @@
  
 -(void) viewDidLoad {
     [super viewDidLoad];
-    soundAlert = [[Alert alloc] init];
+    alert = [[Alert alloc] init];
     self.timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
     [self.goButton.titleLabel setFont: [UIFont fontWithName: @"Comfortaa-Bold" size: 19.56]];
     self.buttons = [NSArray arrayWithObjects: self.startBreakButton,
@@ -60,8 +60,8 @@
 -(void) startSnooze {
     timer = [Timer startWithDuration: SNOOZE_DURATION target: self selector: @selector(startSnooze)];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"start_break_bg.png"]];
-    NSLog(@"alert: %@", soundAlert);
-    [soundAlert trigger];
+    NSLog(@"alert: %@", alert);
+    [alert trigger];
     [self show: startBreakButton];
 }
 
@@ -74,6 +74,7 @@
 -(void) breakEnded {
     self.timerLabel.text = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"black_bg.png"]];
+    [self.alert triggerSound];
     [self show: goButton];
 }
 

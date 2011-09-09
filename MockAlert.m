@@ -6,4 +6,12 @@
     
 }
 
+-(void) triggerSound {
+    
+}
+
+-(void) triggerDialog {
+    
+}
+
 @end
