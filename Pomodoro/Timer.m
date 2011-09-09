@@ -8,7 +8,9 @@
 
 +(id) startWithDuration:(int)duration target:(NSObject<TimerDelegate>*)target selector:(SEL)selector {
     Timer* timer = [[[Timer alloc] init] autorelease];
-    timer.remainingTime = [[RemainingTime alloc] initWithDuration: duration];
+    RemainingTime* remainingTime = [[RemainingTime alloc] initWithDuration: duration];
+    timer.remainingTime = remainingTime;
+    [remainingTime release];
     timer.target = target;
     timer.selector = selector;
     [target remainingTimeDidChange: [NSNumber numberWithInt: duration]];

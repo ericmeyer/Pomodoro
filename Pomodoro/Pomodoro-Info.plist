@@ -13,6 +13,7 @@
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>gogo114.png</string>
+		<string>icon.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
 	<string>eighthlight.${PRODUCT_NAME:rfc1034identifier}</string>
@@ -28,8 +29,6 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
-	<key>UIPrerenderedIcon</key>
-	<true/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>
@@ -41,6 +40,8 @@
 		<string>Comfortaa_Bold.ttf</string>
 		<string>Podkova-Regular.ttf</string>
 	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

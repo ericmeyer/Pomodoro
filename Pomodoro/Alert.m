@@ -20,6 +20,11 @@
     return self;
 }
 
+-(void) dealloc {
+    [alertDialog release];
+    [super dealloc];
+}
+
 -(void) trigger {
     [self triggerSound];
     [self triggerDialog];

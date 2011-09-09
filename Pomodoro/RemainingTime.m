@@ -10,8 +10,10 @@
 
 -(id) initWithDuration: (int) givenDuration {
     if ((self = [super init])) {
+        NSDate* date = [NSDate date];
         self.duration = [NSNumber numberWithInt: givenDuration];
-        self.startingTime = [NSDate date];
+        self.startingTime = date;
+//        [date release];
         self.elapsedPauseTime = 0;
     }
     return self;

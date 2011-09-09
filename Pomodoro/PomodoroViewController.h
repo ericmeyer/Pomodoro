@@ -42,4 +42,6 @@
 -(void) startBreak;
 -(void) breakEnded;
 
+-(void) setBackground: (NSString*) name;
+
 @end
