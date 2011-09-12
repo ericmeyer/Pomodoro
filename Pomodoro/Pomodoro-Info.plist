@@ -35,13 +35,9 @@
 	<string>MainWindow</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Jura-Regular.ttf</string>
 		<string>Comfortaa_Regular.ttf</string>
 		<string>Comfortaa_Bold.ttf</string>
-		<string>Podkova-Regular.ttf</string>
 	</array>
-	<key>UIPrerenderedIcon</key>
-	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
