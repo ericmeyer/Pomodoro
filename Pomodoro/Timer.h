@@ -19,7 +19,7 @@
 @property (readonly) NSNumber* duration;
 @property (nonatomic) BOOL isPaused;
 
-+(id) startWithDuration: (int) duration target: (NSObject<TimerDelegate>*) target selector: (SEL) selector;
++(id) startWithDuration:(int)duration andCallWhenEnded:(SEL)selector on:(NSObject<TimerDelegate>*)target;
 -(void) checkRemainingTime;
 -(void) cancel;
 -(void) pause;

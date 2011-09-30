@@ -6,7 +6,7 @@
 
 @synthesize remainingTime, target, selector, lastRemainingTime, countdown, isPaused;
 
-+(id) startWithDuration:(int)duration target:(NSObject<TimerDelegate>*)target selector:(SEL)selector {
++(id) startWithDuration:(int)duration andCallWhenEnded:(SEL)selector on:(NSObject<TimerDelegate>*)target {
     Timer* timer = [[[Timer alloc] init] autorelease];
     RemainingTime* remainingTime = [[RemainingTime alloc] initWithDuration: duration];
     timer.remainingTime = remainingTime;

@@ -53,7 +53,7 @@
 }
 
 -(IBAction) startPomodoro {
-    self.timer = [Timer startWithDuration: POMODORO_DURATION target: self selector: @selector(startSnooze)];
+    self.timer = [Timer startWithDuration: POMODORO_DURATION andCallWhenEnded: @selector(startSnooze) on: self];
     [self show: cancelButton];
 }
 
@@ -65,7 +65,7 @@
 }
 
 -(void) startSnooze {
-    self.timer = [Timer startWithDuration: SNOOZE_DURATION target: self selector: @selector(startSnooze)];
+    self.timer = [Timer startWithDuration: SNOOZE_DURATION andCallWhenEnded: @selector(startSnooze) on: self];
     [self setBackground: @"start_break_bg.png"];
     [alert trigger];
     [self show: startBreakButton];
@@ -73,7 +73,7 @@
 
 -(IBAction) startBreak {
     [timer cancel];
-    self.timer = [Timer startWithDuration: BREAK_DURATION target: self selector: @selector(breakEnded)];
+    self.timer = [Timer startWithDuration: BREAK_DURATION andCallWhenEnded: @selector(breakEnded) on: self];
     [self show: cancelBreakButton];
 }
 
