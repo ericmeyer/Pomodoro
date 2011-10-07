@@ -53,8 +53,13 @@
 }
 
 -(IBAction) startPomodoro {
-    self.timer = [Timer startWithDuration: POMODORO_DURATION andCallWhenEnded: @selector(startSnooze) on: self];
+    self.timer = [Timer startWithDuration: POMODORO_DURATION andCallWhenEnded: @selector(pomodoroEnded) on: self];
     [self show: cancelButton];
+}
+
+-(void) pomodoroEnded {
+    //track pmomodoro
+    [self startSnooze];
 }
 
 -(IBAction) cancelPomodoro {

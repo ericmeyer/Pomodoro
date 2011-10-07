@@ -7,9 +7,9 @@
 
 
 #if TESTING_TIMING
-    #define POMODORO_DURATION 3
-    #define SNOOZE_DURATION 3
-    #define BREAK_DURATION 6
+    #define POMODORO_DURATION 5
+    #define SNOOZE_DURATION 15
+    #define BREAK_DURATION 5
 #else
     #define POMODORO_DURATION 25*60
     #define SNOOZE_DURATION 1*60
@@ -37,9 +37,10 @@
 @property (nonatomic, retain) NSObject<AlertProtocol>* alert;
 
 -(IBAction) startPomodoro;
+-(void) pomodoroEnded;
 -(IBAction) cancelPomodoro;
 -(void) startSnooze;
--(void) startBreak;
+-(IBAction) startBreak;
 -(void) breakEnded;
 
 -(void) setBackground: (NSString*) name;

@@ -47,7 +47,15 @@ CONTEXT(PomodoroViewController)
                     
                     [expect(controller.timer.duration) toBeEqualTo: [NSNumber numberWithInt: POMODORO_DURATION]];
                     [expect(controller.timer.target) toBeEqualTo: controller];
-                    [expect(NSStringFromSelector(controller.timer.selector)) toBeEqualTo: NSStringFromSelector(@selector(startSnooze))];
+                    [expect(NSStringFromSelector(controller.timer.selector)) toBeEqualTo: NSStringFromSelector(@selector(pomodoroEnded))];
+                }),
+             it(@"starts a snooze when the pomodoro ends",
+                ^{
+                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
+                    
+                    [controller pomodoroEnded];
+                    
+                    [expect(controller.timer.duration) toBeEqualTo: [NSNumber numberWithInt: SNOOZE_DURATION]];
                 }),
              it(@"shows only the go button on load",
                 ^{
