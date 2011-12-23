@@ -18,17 +18,15 @@ CONTEXT(PomodoroViewController)
                     controller.goButton = [[UIButton alloc] init];
                     controller.startBreakButton = [[UIButton alloc] init];
                     controller.cancelBreakButton = [[UIButton alloc] init];
+                    [controller viewDidLoad];
                 }),
              it(@"sets the label text on viewDidLoad", 
                 ^{
-                    [controller viewDidLoad];
-                    
                     NSString* formattedDuration = [RemainingTime stringFormatForDuration: POMODORO_DURATION];
                     [expect(controller.timerLabel.text) toBeEqualTo: formattedDuration];
                 }),
              it(@"initalizes the alert",
                 ^{
-                    [controller viewDidLoad];
                     [expect([controller.alert class]) toBeEqualTo: [Alert class]];
                 }),
              it(@"updates the label text",
@@ -51,9 +49,7 @@ CONTEXT(PomodoroViewController)
                     [expect(controller.timer.duration) toBeEqualTo: [NSNumber numberWithInt: SNOOZE_DURATION]];
                 }),
              it(@"shows only the go button on load",
-                ^{
-                    [controller viewDidLoad];
-                    
+                ^{                    
                     expectFalse(controller.goButton.hidden);
                     expectTruth(controller.cancelButton.hidden);
                     expectTruth(controller.startBreakButton.hidden);
@@ -61,7 +57,6 @@ CONTEXT(PomodoroViewController)
                 }),
              it(@"shows only the cancel button on startPomodoro",
                 ^{
-                    [controller viewDidLoad];
                     [controller startPomodoro];
 
                     expectFalse(controller.cancelButton.hidden);
@@ -71,7 +66,6 @@ CONTEXT(PomodoroViewController)
                 }),
              it(@"shows only the go button when canceling the pomodoro",
                 ^{
-                    [controller viewDidLoad];
                     [controller startPomodoro];
                     [controller cancelPomodoro];
                     
@@ -82,16 +76,12 @@ CONTEXT(PomodoroViewController)
                 }),
              it(@"resets the timer label text on cancel",
                 ^{
-                    PomodoroViewController* controller = [[[PomodoroViewController alloc] init] autorelease];
-                    controller.timerLabel = [[UILabel alloc] init];
-                    
                     [controller cancelPomodoro];
                     
                     [expect(controller.timerLabel.text) toBeEqualTo: [RemainingTime stringFormatForDuration: POMODORO_DURATION]];
                 }),
              it(@"cancels the timer upon pressment of the cancel button",
                 ^{
-                    [controller viewDidLoad];
                     [controller startPomodoro];
                     [controller cancelPomodoro];
                     
@@ -99,7 +89,6 @@ CONTEXT(PomodoroViewController)
                 }),
              it(@"starts a snooze",
                 ^{
-                    [controller viewDidLoad];
                     controller.alert = [[MockAlert alloc] init];
                     [controller startSnooze];
                     
@@ -135,7 +124,6 @@ CONTEXT(PomodoroViewController)
 //                }),
              it(@"shows only the start break button when starting a snooze",
                 ^{
-                    [controller viewDidLoad];
                     controller.alert = [[MockAlert alloc] init];
                     [controller startPomodoro];
                     [controller startSnooze];
@@ -155,7 +143,6 @@ CONTEXT(PomodoroViewController)
                 }),
              it(@"shows only the can break button starting a break",
                 ^{                    
-                    [controller viewDidLoad];
                     [controller startPomodoro];
                     [controller startBreak];
                     
@@ -166,7 +153,6 @@ CONTEXT(PomodoroViewController)
                 }),
              it(@"cancels the old timer before starting the break on start break",
                 ^{
-                    [controller viewDidLoad];
                     controller.alert = [[MockAlert alloc] init];
                     [controller startSnooze];
                     Timer* oldTimer = controller.timer;
