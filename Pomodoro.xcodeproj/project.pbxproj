@@ -43,6 +43,9 @@
 		F87449E2141AA4200040CC9B /* slime_splash.aif in Resources */ = {isa = PBXBuildFile; fileRef = F87449E0141AA4200040CC9B /* slime_splash.aif */; };
 		F87449E4141AA5EE0040CC9B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F87449E3141AA5EE0040CC9B /* icon.png */; };
 		F87449E5141AA5EE0040CC9B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F87449E3141AA5EE0040CC9B /* icon.png */; };
+		F88397FC14A4F0F1005E3F04 /* OCDSpecCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = F88397F714A4F0F1005E3F04 /* OCDSpecCondition.m */; };
+		F88397FD14A4F0F1005E3F04 /* OCDSpecPostCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = F88397F914A4F0F1005E3F04 /* OCDSpecPostCondition.m */; };
+		F88397FE14A4F0F1005E3F04 /* OCDSpecPreCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = F88397FB14A4F0F1005E3F04 /* OCDSpecPreCondition.m */; };
 		F88530E013CC85BD0026B42B /* TimerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530DF13CC85BD0026B42B /* TimerSpec.m */; };
 		F88530E313CC86630026B42B /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530E213CC86630026B42B /* Timer.m */; };
 		F88530E613CC89E30026B42B /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = F88530E213CC86630026B42B /* Timer.m */; };
@@ -119,6 +122,12 @@
 		F871A88E141193A90027A0D6 /* MockAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockAlert.m; sourceTree = SOURCE_ROOT; };
 		F87449E0141AA4200040CC9B /* slime_splash.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = slime_splash.aif; sourceTree = "<group>"; };
 		F87449E3141AA5EE0040CC9B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		F88397F614A4F0F1005E3F04 /* OCDSpecCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDSpecCondition.h; sourceTree = "<group>"; };
+		F88397F714A4F0F1005E3F04 /* OCDSpecCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDSpecCondition.m; sourceTree = "<group>"; };
+		F88397F814A4F0F1005E3F04 /* OCDSpecPostCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDSpecPostCondition.h; sourceTree = "<group>"; };
+		F88397F914A4F0F1005E3F04 /* OCDSpecPostCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDSpecPostCondition.m; sourceTree = "<group>"; };
+		F88397FA14A4F0F1005E3F04 /* OCDSpecPreCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDSpecPreCondition.h; sourceTree = "<group>"; };
+		F88397FB14A4F0F1005E3F04 /* OCDSpecPreCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDSpecPreCondition.m; sourceTree = "<group>"; };
 		F88530DF13CC85BD0026B42B /* TimerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerSpec.m; path = Specs/TimerSpec.m; sourceTree = SOURCE_ROOT; };
 		F88530E113CC86630026B42B /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		F88530E213CC86630026B42B /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
@@ -228,6 +237,19 @@
 			path = OCMock;
 			sourceTree = "<group>";
 		};
+		F88397F514A4F0F1005E3F04 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				F88397F614A4F0F1005E3F04 /* OCDSpecCondition.h */,
+				F88397F714A4F0F1005E3F04 /* OCDSpecCondition.m */,
+				F88397F814A4F0F1005E3F04 /* OCDSpecPostCondition.h */,
+				F88397F914A4F0F1005E3F04 /* OCDSpecPostCondition.m */,
+				F88397FA14A4F0F1005E3F04 /* OCDSpecPreCondition.h */,
+				F88397FB14A4F0F1005E3F04 /* OCDSpecPreCondition.m */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
 		F89E691C13902DF200B24D7D = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +354,7 @@
 		F89E698213902F9B00B24D7D /* OCDSpec */ = {
 			isa = PBXGroup;
 			children = (
+				F88397F514A4F0F1005E3F04 /* Contract */,
 				F84D418113C7973100161BBF /* unitTestMain.m */,
 				F89E698313902F9B00B24D7D /* OCDSpec.h */,
 				F89E698413902F9B00B24D7D /* OCDSpecDescription.h */,
@@ -554,6 +577,9 @@
 				F8405ADD13CDD43B003B14BD /* MockTimerDelegate.m in Sources */,
 				F871A8881411850E0027A0D6 /* Alert.m in Sources */,
 				F871A88F141193A90027A0D6 /* MockAlert.m in Sources */,
+				F88397FC14A4F0F1005E3F04 /* OCDSpecCondition.m in Sources */,
+				F88397FD14A4F0F1005E3F04 /* OCDSpecPostCondition.m in Sources */,
+				F88397FE14A4F0F1005E3F04 /* OCDSpecPreCondition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

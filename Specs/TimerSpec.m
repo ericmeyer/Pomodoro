@@ -5,58 +5,61 @@
 
 CONTEXT(Timer)
 {
+    __block MockTimerDelegate* delegate;
+    __block Timer* timer;
+    __block MockRemainingTime* mockRemainingTime;
+
     describe(@"Timer",
+             beforeEach(
+                ^{
+                    delegate = [[[MockTimerDelegate alloc] init] autorelease];
+                    timer = [Timer startWithDuration: 60 andCallWhenEnded: @selector(someSelector) on: delegate];
+                    
+                    mockRemainingTime = [[[MockRemainingTime alloc] init] autorelease];
+                }),
              it(@"has a target when started",
                 ^{
-                    MockTimerDelegate* target = [[[MockTimerDelegate alloc] init] autorelease];
-                    Timer* timer = [Timer startWithDuration: 60 andCallWhenEnded: nil on: target];
-                    
-                    [expect(timer.target) toBeEqualTo: target];
+                    [expect(timer.target) toBeEqualTo: delegate];
                 }),
              it(@"has a selector",
                 ^{
-                    Timer* timer = [Timer startWithDuration: 60 andCallWhenEnded: @selector(someSelector) on: nil];
-                    expectFalse(timer.selector == nil);
+                    NSString* timerSelector = NSStringFromSelector(timer.selector);
+                    [expect(timerSelector) toBeEqualTo: @"someSelector"];
                 }),
              it(@"has a valid countdown",
                 ^{
-                    Timer* timer = [Timer startWithDuration: 10 andCallWhenEnded: @selector(someSelector) on: nil];
                     expectTruth([timer.countdown isValid]);
                 }),
              it(@"informs the target that the remaining time did change with the duration",
                 ^{
-                    MockTimerDelegate* delegate = [[[MockTimerDelegate alloc] init] autorelease];
                     [Timer startWithDuration: 123 andCallWhenEnded: @selector(someSelector) on: delegate];
                     
                     expectTruth(delegate.remainingTimeDidChangeWasCalled);
                     [expect(delegate.remainingTimeDidChangeCalledWith) toBeEqualTo: [NSNumber numberWithInt: 123]];
                 }),
+             it(@"notifies the delegate on start",
+                ^{
+                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 1]];
+                }),
              it(@"notifies the delegate that time time changes the first check", 
                 ^{
-                    MockTimerDelegate* delegate = [[[MockTimerDelegate alloc] init] autorelease];
-                    Timer* timer = [Timer startWithDuration: 60 andCallWhenEnded: @selector(someSel) on: delegate];
-                    
+                    [delegate init];
                     [timer checkRemainingTime];
                     
-                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 2]];
+                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 1]];
                 }),
              it(@"passes in the remaining seconds when notifying of time change",
                 ^{
-                    MockTimerDelegate* delegate = [[[MockTimerDelegate alloc] init] autorelease];
-                    Timer* timer = [Timer startWithDuration: 60 andCallWhenEnded: @selector(someSel) on: delegate];
-                    MockRemainingTime* remainingTime = [[[MockRemainingTime alloc] init] autorelease];
-                    timer.remainingTime = remainingTime;
-                    remainingTime.totalSecondsRemaining = 60;
+                    timer.remainingTime = mockRemainingTime;
+                    mockRemainingTime.totalSecondsRemaining = 60;
 
                     [timer checkRemainingTime];
                     
                     [expect(delegate.remainingTimeDidChangeCalledWith) toBeEqualTo: [NSNumber numberWithInt: 60]];
                 }),
              it(@"notifies the delegate a second time if the time changes",
-                ^{
-                    MockTimerDelegate* delegate = [[[MockTimerDelegate alloc] init] autorelease];
-                    Timer* timer = [Timer startWithDuration: 60 andCallWhenEnded: @selector(someSel) on: delegate];
-                    
+                ^{                    
+                    [delegate init];
                     MockRemainingTime* remainingTime = [[[MockRemainingTime alloc] init] autorelease];
                     timer.remainingTime = remainingTime;
                     remainingTime.totalSecondsRemaining = 60;
@@ -65,30 +68,25 @@ CONTEXT(Timer)
                     remainingTime.totalSecondsRemaining = 59;
                     [timer checkRemainingTime];
                     
-                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 3]];
+                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 2]];
                 }),
              it(@"does not notify the delegate a second time if the time has not changed",
-                ^{
-                    MockTimerDelegate* delegate = [[[MockTimerDelegate alloc] init] autorelease];
-                    Timer* timer = [Timer startWithDuration: 60 andCallWhenEnded: @selector(someSel) on: delegate];
-                    
-                    MockRemainingTime* remainingTime = [[[MockRemainingTime alloc] init] autorelease];
-                    timer.remainingTime = remainingTime;
-                    remainingTime.totalSecondsRemaining = 60;
+                ^{                    
+                    [delegate init];
+                    timer.remainingTime = mockRemainingTime;
+                    mockRemainingTime.totalSecondsRemaining = 60;
                     
                     [timer checkRemainingTime];
                     [timer checkRemainingTime];
                     
-                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 2]];
+                    [expect(delegate.remainingTimeDidChangeWasCalledTimes) toBeEqualTo: [NSNumber numberWithInt: 1]];
                 }),
              it(@"performs the given selector if the time ends",
                 ^{
-                    MockTimerDelegate* delegate = [[[MockTimerDelegate alloc] init] autorelease];
                     Timer* timer = [Timer startWithDuration: 60 andCallWhenEnded: @selector(timerEnded) on: delegate];
                     
-                    MockRemainingTime* remainingTime = [[[MockRemainingTime alloc] init] autorelease];
-                    timer.remainingTime = remainingTime;
-                    remainingTime.totalSecondsRemaining = 0;
+                    timer.remainingTime = mockRemainingTime;
+                    mockRemainingTime.totalSecondsRemaining = 0;
 
                     [timer checkRemainingTime];
                     
@@ -96,29 +94,24 @@ CONTEXT(Timer)
                 }),
              it(@"invalidates the countdown on cancel",
                 ^{
-                    Timer* timer = [Timer startWithDuration: 10 andCallWhenEnded: @selector(someSelector) on: nil];
                     [timer cancel];
                     expectFalse([timer.countdown isValid]);
                 }),
-             it(@"pauses the timer",
+             it(@"pauses the remaining time",
                 ^{
-                    Timer* timer = [Timer startWithDuration: 60 andCallWhenEnded: nil on: nil];
-                    MockRemainingTime* remainingTime = [[[MockRemainingTime alloc] init] autorelease];
-                    timer.remainingTime = remainingTime;
+                    timer.remainingTime = mockRemainingTime;
                     
                     [timer pause];
                     
-                    expectTruth(remainingTime.wasPauseCalled);
+                    expectTruth(mockRemainingTime.wasPauseCalled);
                 }),
-             it(@"resumes the timer",
+             it(@"resumes the remaining time",
                 ^{
-                    Timer* timer = [Timer startWithDuration: 60 andCallWhenEnded: nil on: nil];
-                    MockRemainingTime* remainingTime = [[[MockRemainingTime alloc] init] autorelease];
-                    timer.remainingTime = remainingTime;
+                    timer.remainingTime = mockRemainingTime;
                     
                     [timer resume];
                     
-                    expectTruth(remainingTime.wasResumeCalled);
+                    expectTruth(mockRemainingTime.wasResumeCalled);
                 }),
             nil);
 }
